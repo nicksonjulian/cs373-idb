@@ -1,14 +1,15 @@
 FORMAT: 1A
 HOST: http://www.google.com
 
-# idb1
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+# Sochi 2014 Winter Olympics
+Documentation for our Olympics website
 
-# Group Notes
-Notes related resources of the **Notes API**
+# Group Athletes
+Athletes related resources
 
-## Notes Collection [/notes]
-### List all Notes [GET]
+
+## /athletes
+### List of all athletes [GET]
 + Response 200 (application/json)
 
         [{
@@ -17,22 +18,8 @@ Notes related resources of the **Notes API**
           "id": 2, "title": "Pick-up posters from post-office"
         }]
 
-### Create a Note [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
-
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-
-### Retrieve a Note [GET]
+## /athletes/{id}
+### Retrieve an Athlete [GET]
 + Response 200 (application/json)
 
     + Header
@@ -42,6 +29,46 @@ A single Note object with all its details
     + Body
 
             { "id": 2, "title": "Pick-up posters from post-office" }
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
+    
 
-### Remove a Note [DELETE]
-+ Response 204
+# Group Countries
+## /countries
+### List of all Countries [GET]
++ Response 200 (application/json)
+
+## /countries/{id}
+### Retrieve a Country [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
+    
+
+# Group Events
+## /events
+### List of all Events & associated Sports [GET]
++ Response 200 (application/json)
+
+## /events/{id}
+### Retrieve an event [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
+    
