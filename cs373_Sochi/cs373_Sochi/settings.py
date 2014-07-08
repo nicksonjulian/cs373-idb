@@ -37,6 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'athlete',
+    'country',
+    'event',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -17,17 +17,17 @@ class Athlete(models.Model):
                               choices=GENDER_CHOICES,
                               default='')
     birthdate = models.DateField(blank=True, null=True)
-    gold_medals = models.ManyToManyField(Events, blank=True)
-    silver_medals = models.ManyToManyField(Events, blank=True)
-    bronze_medals = models.ManyToManyField(Events, blank=True)
+    gold_medals = models.ManyToManyField('Events', blank=True, related_name='athlete_gold')
+    silver_medals = models.ManyToManyField('Events', blank=True, related_name='athlete_silver')
+    bronze_medals = models.ManyToManyField('Events', blank=True, related_name='athlete_bronze')
 
 class Events(models.Model):
     name = models.CharField(max_length=50)
     sport = models.CharField(max_length=50)
     desc = models.CharField(max_length=500)
-    gold_medalists =  models.ManyToManyField(Athlete, blank=True)
-    silver_medalists =  models.ManyToManyField(Athlete, blank=True)
-    bronze_medalists =  models.ManyToManyField(Athlete, blank=True)
+    gold_medalists =  models.ManyToManyField(Athlete, blank=True, related_name='events_gold')
+    silver_medalists =  models.ManyToManyField(Athlete, blank=True, related_name='events_silver')
+    bronze_medalists =  models.ManyToManyField(Athlete, blank=True, related_name='events_bronze')
 
 class Country(models.Model):
     name = models.CharField(max_length=150)
@@ -35,6 +35,6 @@ class Country(models.Model):
     total_gold_medals = models.IntegerField(blank=True)
     total_silver_medals = models.IntegerField(blank=True)
     total_bronze_medals = models.IntegerField(blank=True)
-    athletes = models.ManyToManyField(Athlete, blank=True)
+    athletes = models.ManyToManyField(Athlete, blank=True, related_name='country_athletes')
     description = models.CharField(max_length=500)
     #For Events with medals, load dynamically (?)
