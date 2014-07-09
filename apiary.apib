@@ -2,11 +2,12 @@ FORMAT: 1A
 HOST: http://www.google.com
 
 # Sochi 2014 Winter Olympics
-Documentation for our Olympics website
+Documentation for Sochi 2014 Winter Olympics API
 
 # Group Athletes
 Athletes related resources. An athlete object has the following attributes:
 
+* Id
 * First Name
 * Last Name
 * Gender
@@ -16,52 +17,39 @@ Athletes related resources. An athlete object has the following attributes:
 * Height
 * Weight
 * Place of Birth
-* Total Medals
-* Gold Medals
-* Silver Medals
-* Bronze Medals
+* Total Medals  (Total of Gold, Silver, and Bronze Medals won by the athlete)
+* Gold Medals   (List of Events)
+* Silver Medals (List of Events)
+* Bronze Medals (List of Events)
 
 
 ## /athletes
 ### List of all athletes [GET]
-Returns a list of all athletes' ids and names.
+Returns a list of all athletes and their ids.
 + Response 200 (application/json)
-
-    + Headers
-
-            Accept: application/json
-            
+    
     + Body
 
             {
-                "Athletes":["1=Meryl Davis","2=Tobias Arit","3=Ireen Wust"]
+                "ID=Athletes":["1=Meryl Davis","2=Tobias Arit","3=Ireen Wust"]
             }
 
 + Response 204
 
-+ Response 503
-
-    + Body
-    
-            Service is currently unavailable.
-
 
 ## /athletes/{id}
 ### Retrieve an Athlete [GET]
-            
+Returns the details of an athlete.
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
+
+    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with.
 
 + Response 200 (application/json)
-
-    + Header
-
-            Accept: application/json
 
     + Body
 
             {
-            
+                "Id":1,
                 "First Name":"Ireen",
                 "Last Name":"Wust",
                 "Gender":"Female",
@@ -80,58 +68,89 @@ Returns a list of all athletes' ids and names.
 # Group Countries
 Countries related resources. A country has the following attributes:
 
+* Id
 * Name
-* Description
-* Total Gold Medals
+* Description (Wiki link)
+* Year of First Appearance
+* Number of Appearances
+* Total of Gold Medals
 * Total of Silver Medals
 * Total of Bronze Medals
 * List of Athletes
-* Sports participated
+* Sports participated in Sochi
 
 ## /countries
 ### List of all Countries [GET]
+Returns a list of countries and their ids.
 + Response 200 (application/json)
+        
+    + Body
+    
+            {
+                "ID=Countries":["1=United States","2=Germany","3=Netherlands"]
+            }
 
 ## /countries/{id}
 ### Retrieve a Country [GET]
++ Parameters
+
+    + id (required, number, `1`) ... Numeric `id` of the Country to perform action with.
+
 + Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
+            {
+                "Id":"1",
+                "Name":"United States",
+                "Description":"--",
+                "Year of First Appearance":"1924",
+                "Number of Appearances":"22",
+                "Total of Gold Medals":"28",
+                "Total of Silver Medals":"9",
+                "Total of Bronze Medals":"7",
+                "List of Athletes":"12",
+                "Sports participated in Sochi":""
+            }
     
 
 # Group Events
 Events related resources. An event has the following attributes:
 
-* Name
-* Sport(s) associated
-* Description
+* Id
+* Name (This consists of the event's name and its associated sport)
+* Description (Wiki link)
+* Sport
 * Gold Medalist(s)
 * Silver Medalist(s)
 * Bronze Medalist(s)
 
 ## /events
-### List of all Events & associated Sports [GET]
+### List of all Events [GET]
 + Response 200 (application/json)
+
+    + Body
+            
+            {
+                "id=Sport:Event Name"=["1=Figure Skating:Ice Dance Free Dance","2=Luge:Doubles","3=Speed Skating:Ladies' 3000m"]
+            }
 
 ## /events/{id}
 ### Retrieve an event [GET]
++ Parameters
+
+    + id (required, number, `1`) ... Numeric `id` of the Event to perform action with.
+    
 + Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
-    
+            {
+                "Id":"1",
+                "Name":"Speed Skating:Ladies' 3000m",
+                "Description":"http://www.sochi2014.com/en/speed-skating-about",
+                "Sport":"Speed Skating",
+                "Gold Medalist":["Ireen Wust"],
+                "Silver Medalist":["Martina Sablikova"],
+                "Bronze Medalist":["Olga Graf"]
+            }
