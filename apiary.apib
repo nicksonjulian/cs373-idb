@@ -5,7 +5,16 @@ HOST: http://www.google.com
 Documentation for our Olympics website
 
 # Group Athletes
-Athletes related resources
+Athletes related resources. An athlete object has the following attributes:
+
+* First Name
+* Last Name
+* Country
+* Gender
+* Date of Birth
+* Gold Medals
+* Silver Medals
+* Bronze Medals
 
 
 ## /athletes
@@ -34,6 +43,17 @@ Athletes related resources
     
 
 # Group Countries
+Countries related resources. A country has the following attributes:
+
+* Name
+* Description
+* Total Gold Medals
+* Total of Silver Medals
+* Total of Bronze Medals
+* List of Athletes
+* Sports participated
+* Flag
+
 ## /countries
 ### List of all Countries [GET]
 + Response 200 (application/json)
@@ -54,6 +74,15 @@ Athletes related resources
     
 
 # Group Events
+Events related resources. An event has the following attributes:
+
+* Name
+* Sport(s) associated
+* Description
+* Gold Medalist(s)
+* Silver Medalist(s)
+* Bronze Medalist(s)
+
 ## /events
 ### List of all Events & associated Sports [GET]
 + Response 200 (application/json)
