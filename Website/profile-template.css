@@ -1,0 +1,81 @@
+body {
+	padding-top: 50px;
+
+}
+.navbar .nav > li > a{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+.navbar .navbar-brand{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+	background-color: white;
+	color: white;	
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {	
+	background-color: white;
+	color: #3090C7;
+}
+.dropdown-menu>li>a {
+	background-color: white;
+	color: #3090C7;
+}
+.navbar{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+.profile-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+table, tr, td{
+	border-radius: 10px;
+	padding: 10px;
+	vertical-align:top;
+	min-width:100%;
+	max-width:100%;
+}
+.athlete-info td {
+	border: 2px solid #5c5858;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+}
+
+.medal-table tr td{
+	border: 2px solid #5c5858;
+	border-radius: 10px;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+}
+.medal-events tr td{
+	border: 2px solid #5c5858;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+
+}
+a{color:black;}
+
+th {
+	border: 2px solid #5c5858;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	background: linear-gradient(#3090C7, #357EC7);
+	
+}
+
+.gold {
+	background: linear-gradient(#FFDB58, #D4A017);
+}
+
+.silver {
+	background: linear-gradient(#E5E4E2, #B6B6B4);
+}
+
+.bronze {
+	background: linear-gradient(#EDC9AF, #CD7F32);
+	
+}
+
+.medal-key-list {
+	text-align:left;
+}
