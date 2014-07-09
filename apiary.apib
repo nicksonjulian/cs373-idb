@@ -9,9 +9,14 @@ Athletes related resources. An athlete object has the following attributes:
 
 * First Name
 * Last Name
-* Country
 * Gender
+* Nationality
 * Date of Birth
+* Age
+* Height
+* Weight
+* Place of Birth
+* Total Medals
 * Gold Medals
 * Silver Medals
 * Bronze Medals
@@ -19,28 +24,58 @@ Athletes related resources. An athlete object has the following attributes:
 
 ## /athletes
 ### List of all athletes [GET]
+Returns a list of all athletes' ids and names.
 + Response 200 (application/json)
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
+    + Headers
+
+            Accept: application/json
+            
+    + Body
+
+            {
+                "Athletes":["1=Meryl Davis","2=Tobias Arit","3=Ireen Wust"]
+            }
+
++ Response 204
+
++ Response 503
+
+    + Body
+    
+            Service is currently unavailable.
+
 
 ## /athletes/{id}
 ### Retrieve an Athlete [GET]
+            
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
+
 + Response 200 (application/json)
 
     + Header
 
-            X-My-Header: The Value
+            Accept: application/json
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with. Has example value.
-    
+            {
+            
+                "First Name":"Ireen",
+                "Last Name":"Wust",
+                "Gender":"Female",
+                "Nationality":"Netherlands",
+                "Date of Birth":"1 April 1986",
+                "Age":28,
+                "Height":"1.68m (5'6")",
+                "Weight":"63 kg (139 lbs)",
+                "Place of birth":"Goirle, Netherlands",
+                "Total Medals":5,
+                "Gold Medals":["Speed Skating:Ladies' 3000m", "Speed Skating:Ladies' Team Pursuit"]
+                "Silver Medals":["Speed Skating:Ladies' 1000m", "Speed Skating:Ladies' 1500m", "Speed Skating:Ladies' 5000m"]
+                "Bronze Medals":[]
+            }
 
 # Group Countries
 Countries related resources. A country has the following attributes:
@@ -52,7 +87,6 @@ Countries related resources. A country has the following attributes:
 * Total of Bronze Medals
 * List of Athletes
 * Sports participated
-* Flag
 
 ## /countries
 ### List of all Countries [GET]
