@@ -30,12 +30,17 @@ body {
 	padding: 40px 15px;
 	text-align: center;
 }
+
 table, tr, td{
-	border-radius: 10px;
 	padding: 10px;
 	vertical-align:top;
 	min-width:100%;
 	max-width:100%;
+}
+img {
+	border: 2px solid #5c5858;
+	min-width:100px;
+	max-width:250px;
 }
 .athlete-info td {
 	border: 2px solid #5c5858;
@@ -44,7 +49,6 @@ table, tr, td{
 
 .medal-table tr td{
 	border: 2px solid #5c5858;
-	border-radius: 10px;
 	background: linear-gradient(#FFFFFF, #E5E4E2);
 }
 .medal-events tr td{
