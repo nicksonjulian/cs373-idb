@@ -1,3 +1,4 @@
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +12,15 @@
 
   <title>2014 Sochi Winter Olympics</title>
 
+  <link rel="stylesheet" type="text/css" href="{% static 'athlete/bootstrap.min.css' %}" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'athlete/profile-template.css' %}" />
+
   <!-- Bootstrap core CSS -->
-  <link href="bootstrap.min.css" rel="stylesheet"><!-- TODO-->
+  <!--link href="bootstrap.min.css" rel="stylesheet"><!-- TODO-->
 
   <!-- Custom styles for this template -->
-  <link href="profile-template.css" rel="stylesheet"><!--TODO-->
+  <!--link href="profile-template.css" rel="stylesheet"><!--TODO-->
 
   <body>
 
@@ -74,7 +79,7 @@
       <div class="container">
 
 	<div class="profile-template">
-          <div><h1><img src="tobiasarlt.png" alt="Tobias Arlt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tobias Arlt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="germanyflag.png" alt="German Flag"></h1><div>
+          <div><h1><img src="{% static "athlete/images/tobiasarlt.png" %}" alt="Tobias Arlt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tobias Arlt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "germanyflag.png" %}" alt="German Flag"></h1><div>
             
               <p class="lead">Description goes here. Blahblah.</p>
 		  
@@ -160,6 +165,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="bootstrap.min.js"></script>
+    <script src="{% static "bootstrap.min.js" %}"></script>
   </body>
   </html>
