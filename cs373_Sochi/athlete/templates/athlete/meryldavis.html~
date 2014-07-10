@@ -39,12 +39,12 @@
         <div class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav">
-            <li><a href="home.html">Home</a></li>
+            <li class="active"><a href="home.html">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Athletes <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                   <li><a href="http://127.0.0.1:8000/athlete/meryldavis/">Meryl Davis</a></li>
-                  <li><a href="http://127.0.0.1:8000/athlete/tobiasarlt/">Tobias Arlt</a></li>
+                  <li><a href="http://127.0.0.1:8000/athlete/tobiasalrt/">Tobias Arlt</a></li>
                   <li><a href="http://127.0.0.1:8000/athlete/ireenwust/">Ireen Wust</a></li>
               </ul>
               <li class="dropdown">
@@ -79,13 +79,11 @@
         <div class="container">
 
           <div class="profile-template">
-            <div><h1><img src="{% static "athlete/images/ireenwust.jpg" %}" alt="Ireen Wust">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ireen Wust&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "athlete/images/ned.png" %}" alt="Netherlands"></h1><div>
-            
+	    <div><h1><img src="{% static "athlete/images/meryldavis.png" %}" alt="Meryl Davis">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meryl Davis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static "athlete/images/usaflag.png" %}" alt="United States Flag"></h1><div>
             <p class="lead">Description goes here. Blahblah.</p>
             <table style="width:600px">
               <tr>
                 <td>
-
                   <table class="athlete-info">
                     <tr>
                       <th>Gender</th>
@@ -93,50 +91,47 @@
                     </tr>
                     <tr>
                       <th>Nationality</th>
-                      <td>Netherlands</td>
+                      <td>United States</td>
                     </tr>
                     <tr>
                       <th>Birthday</th>
-                      <td>1 April 1986</td>
+                      <td>1 January 1987</td>
                     </tr>
                     <tr>
                       <th>Age</th>
-                      <td>28</td>
+                      <td>27</td>
                     </tr>
                     <tr>
                       <th>Height</th>
-                      <td>1.68m (5'6")</td>
+                      <td>1.60m (5'3")</td>
                     </tr>
                     <tr>
                       <th>Weight</th>
-                      <td>63 kg (139 lbs)</td>
+                      <td>-</td>
                     </tr>
                     <tr>
                       <th>Place of Birth</th>
-                      <td>Goirle, Netherlands</td>
+                      <td>Royal Oak, United States</td>
                     </tr>
                   </table>
 
-
                 </td>
                 <td>
-                 
-                        <table class="medal-table">
-                          <tr>
-                            <th class ="gold">Gold</th>    
-                            <th class ="silver">Silver</th>    
-                            <th class ="bronze">Bronze</th>    
-                            <td>Total</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>    
-                            <td>3</td>    
-                            <td>0</td>    
-                            <td>5</td>
-                          </tr>
-                        </table>
+                  <table class="medal-table">
+                    <tr>
+                      <th class ="gold">Gold</th>    
+                      <th class ="silver">Silver</th>    
+                      <th class ="bronze">Bronze</th>    
+                      <td>Total</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>    
+                      <td>0</td>    
+                      <td>1</td>    
+                      <td>2</td>
+                    </tr>
+                  </table>
 
-                      
                         <br>
 
 
@@ -144,33 +139,29 @@
                           <tr>
                             <th class ="gold">Gold</th>    
                             <td class="medal-key-list">
-                              <div><a href="ss-ladies3000m.html">Speed Skating:Ladies' 3000m</a></div>
-                              <div><a href="ss-ladiesteampursuit.html">Speed Skating:Ladies' Team Pursuit</a></div>
+			      <div>Figure Skating:Ice Dance Free Dance</a></div>
                             </td>    
                           </tr>
                           <tr>
                             <th class ="silver">Silver</th>  
-                            <td class="medal-key-list">
-                              <div><a href="ss-ladies1000m.html">Speed Skating:Ladies' 1000m</a></div>
-                              <div><a href="ss-ladies1500m.html">Speed Skating:Ladies' 1500m</a></div>
-                              <div><a href="ss-ladies5000m.html">Speed Skating:Ladies' 5000m</a></div>
+                            <td class="medal-key-list">                           
                             </td>    
                           </tr>
                           <tr>
                             <th class ="bronze">Bronze</th>  
-                            <td></td>    
+                            <td class="medal-key-list">
+			      <div>Figure Skating:Team Ice Dance Free Dance</a></div>
+			    </td>    
                           </tr>
                         </table>
 
-
-                      </td>
-                    </tr>
-                 
-              </table>
-            </div>
+                </td>
+              </tr>
+            </table>
+          </div>
 
 
-          </div><!-- /.container -->
+        </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript

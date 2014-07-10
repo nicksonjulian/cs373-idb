@@ -12,3 +12,7 @@ def ireen(request):
 
 def tobias(request):
     return render_to_response('athlete/tobiasarlt.html')
+
+def meryl(request):
+    return render_to_response('athlete/meryldavis.html')
+
