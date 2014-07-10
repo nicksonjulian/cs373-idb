@@ -1,0 +1,57 @@
+body {
+  padding-top: 50px;
+}
+table, tr, td{
+	padding: 10px;
+	vertical-align:top;
+	min-width:100%;
+	max-width:100%;
+}
+th {
+	border: 2px solid #5c5858;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	background: linear-gradient(#3090C7, #357EC7);
+	
+}
+tr > td{
+	border: 2px solid #5c5858;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+}
+.navbar .nav > li > a{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+.navbar .navbar-brand{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+	background-color: white;
+	color: white;	
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {	
+	background-color: white;
+	color: #3090C7;
+}
+.navbar{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+
+.medal-key-list {
+	text-align:left;
+}
+.gold {
+	background: linear-gradient(#FFDB58, #D4A017);
+}
+
+.silver {
+	background: linear-gradient(#E5E4E2, #B6B6B4);
+}
+
+.bronze {
+	background: linear-gradient(#EDC9AF, #CD7F32);
+	
+}
