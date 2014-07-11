@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #map_canvas {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var map_canvas = document.getElementById('map_canvas');
+      var map_options = {
+        center: new google.maps.LatLng(51.1642292,10.4541193),
+        zoom: 5,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(map_canvas, map_options)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="olympicrings.ico"> <!-- TODO icon -->
+
+  <title>2014 Sochi Winter Olympics</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet"><!-- TODO-->
+
+  <!-- Custom styles for this template -->
+  <link href="countrystyle.css" rel="stylesheet"><!--TODO-->
+
+  <body>
+
+    <!-- Start of Navbar-->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+    
+    <!-- Navbar Title -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Sochi 2014</a>
+    </div>
+    
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+        <!-- Navbar Link #1 -->
+        <li>
+          <a href="#" data-toggle="dropdown">Athletes</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="meryldavis.html">
+                <span class="dropdown-left"><img src="usa_small.png" alt=""></span>
+                <span class="dropdown-right">Meryl Davis</span>
+              </a>
+            </li>       
+            <li>
+              <a href="tobiasarlt.html">
+                <span class="dropdown-left"><img src="ger_small.png" alt=""></span>
+                <span class="dropdown-right">Tobias Arlt</span>
+              </a>  
+            </li>
+            <li>
+              <a href="ireenwust.html">
+                <span class="dropdown-left"><img src="ned_small.png" alt=""></span>
+                <span class="dropdown-right">Ireen Wust</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Navbar Link #2 -->
+        <li>
+          <a href="#" data-toggle="dropdown">Countries</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="usa.html">
+              <span class="dropdown-left"><img src="usa_small.png" alt=""></span>
+              <span class="dropdown-right">United States</span>
+              </a>
+            </li>
+            <li>
+              <a href="ger.html">
+              <span class="dropdown-left"><img src="ger_small.png" alt=""></span>
+              <span class="dropdown-right">Germany</span>
+              </a>
+            </li>
+            <li>
+              <a href="ned.html">
+              <span class="dropdown-left"><img src="ned_small.png" alt=""></span>
+              <span class="dropdown-right">Netherlands</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Navbar Link #3 -->
+        <li>
+          <a href="#" data-toggle="dropdown">Events</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="fs-icedancefreedance.html">
+              <span class="dropdown-left"><img src="fs_icon_small.png" alt=""></span>
+              <span class="dropdown-right">FS:Ice Dance Free Dance</span>
+              </a>
+            </li>
+            <li>
+              <a href="l-doubles.html">
+              <span class="dropdown-left"><img src="l_icon_small.png" alt=""></span>
+              <span class="dropdown-right">Luge:Doubles</span>
+              </a>
+            </li>
+            <li>
+              <a href="ss-ladies3000m.html">
+              <span class="dropdown-left"><img src="ss_icon_small.png" alt=""></span>
+              <span class="dropdown-right">SS:Ladies' 3000m</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      
+      <!-- Search bar -->
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+        <input type="text" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+      <!-- End of Search bar -->
+      
+      </ul>  
+    </div> <!-- Close Collapse -->
+    </div> <!-- Close Container -->
+  </nav> <!-- End of Navbar -->
+
+    <!-- Start of Content -->
+    <div class="header">
+
+      <!-- Left Side -->
+      <img class="flag" src="ger.png" alt="Germany">
+      <h1 class="country-name">Germany</h1 >
+        <hr class="country-decoration">
+        <p>Georg Hackl won three consecutive gold medals in the men's single luge at the 1992, 1994 and 1998 Olympic Winter Games. Hackl was also the first luge competitor to have won medals in five consecutive winter Olympic competitions, having finished with silver at the 2002 Salt Lake Games and also a silver at the 1988 Calgary Games when competing for West Germany.</p>
+        <p>Speed skater Gunda Niemann-Stirnemann [nee Kleeman] won eight career winter Olympic medals, including gold in the women's 3000m and 5000m at the 1992 Albertville Games and gold again in the women's 3000m at the 1998 Nagano Games.</p>
+        <hr class="header-decoration">
+      </div>
+
+      <!-- Start of Body -->
+      <div class="content">
+        <div class="gmap" id="map_canvas"></div>
+        <table class="medal-totals">
+          <h3>Athletes</h3>
+          <tr>
+            <th>Name</th>
+            <th class="gold">Gold</th>
+            <th class="silver">Silver</th>
+            <th class="bronze">Bronze</th>
+            <th class="total">Total</th>
+          </tr>
+          <tr>
+            <td><a href="tobiasarlt.html">Tobias Arlt</a></td>
+            <td>2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Natalie Geisenberger</td>
+            <td>2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>2</td>
+          </tr>
+          <tr>
+           <th class ="total">Total</th>
+           <td>8</td>
+           <td>6</td>
+           <td>5</td>
+           <td>19</td>
+         </tr>
+       </table>
+
+       <table class="medal-events">
+        <h3>Events Placed</h3>
+        <tr>
+          <th>Gold</th>
+          <td><div><a href="l-doubles.html">Luge:Doubles</a></div> <div>Alpine Skiing:Women's Super Combined Slalom</div> <div>Nordic Combined:Individual Gundersen NH/10km</div> 
+           <div>Cross-Country</div></td>
+         </tr>
+         <tr>
+          <th>Silver</th>
+          <td><div> Snowboard:Ladies' Parallel Slalom</div> <div>Alpine Skiing:Women's Super-G</div> <div>Biathlon:Men's Individual 20 km</div></td>
+        </tr>
+        <tr>
+          <th>Bronze</th>
+          <td><div>Figure Skating:Pairs Free Skating</div> <div>Cross-Country:Ladies' Relay 4x5km</div> <div>Alpine Skiing:Women's Giant Slalom</div></td>
+        </tr>
+      </table>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+  </html>
