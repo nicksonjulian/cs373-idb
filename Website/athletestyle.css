@@ -1,16 +1,5 @@
-th {
-	width: 90px;
-	padding: 0px 5px 0px 5px;
-	margin: 0px 0px 0px 0px;
-	border-top: 1px #000000 solid;
-	border-right: 1px #000000 solid;
-	border-bottom: 1px #000000 solid;
-	border-left: 1px #000000 solid;
-	background: linear-gradient(#3090C7, #357EC7);
-}
-
 body {
-	padding: 50px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
 	color:black;
 	background-color:#FFFFFF;
@@ -36,13 +25,13 @@ body {
 }
 .dropdown-left{
 	padding: 0px 0px 0px 0px;
-	margin: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 5px;
 	color:#3090C7;
 }
 .dropdown-right{
-	float:right;
 	padding: 0px 0px 0px 0px;
-	margin: 0px 5px 0px 5px;
+	margin: 0px 10px 0px 5px;
+	color:#3090C7;
 }
 .navbar{
 	background: linear-gradient(#3090C7, #357EC7);
@@ -65,26 +54,31 @@ body {
 	border-bottom: 1px solid #000000
 }
 
-/* Country Classes */
+/* Athlete Classes */
 .flag{
-	float:left;
-	max-width:250px;
+	float:right;
+	max-width:200px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 20px;
+	border: 1px #000000 solid;
+}
+.athlete-pic{
+	float: left;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 20px 0px 0px;
 	border: 1px #000000 solid;
 }
-.country-name{
+.athlete-firstname{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-size:2em;
+	font-style: italic;
+}
+.athlete-lastname{
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
 	font-weight: bold;	
 }
-.country-decoration{
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	color: #000000;
-	width: 300px;
-	border-bottom: 1px solid #000000
-}	
 .athlete-info{
 	padding: 0px 0px 0px 0px;
 	margin: 13px 0px 0px 0px;
@@ -106,6 +100,7 @@ body {
 	border-bottom: 1px #000000 solid;
 	border-left: 1px #000000 solid;
 	font-style: italic;
+	font-size:.8em;
 }
 .athlete-info td{
 	padding: 0px 5px 0px 5px;
@@ -117,22 +112,21 @@ body {
 	border-left: 3px #000000 solid;
 	font-weight: bold;
 }
+.athlete-decoration{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	color: #000000;
+	width: 300px;
+	border-bottom: 1px solid #000000
+}	
 	
 /* Medal Classes */
-.lead{
-	font-family: Sans-serif, serif;
-}
 .content {
-	padding: 0px 20px 20px 20px;
+	width:760px;
+	padding: 20px 20px 20px 20px;
 	margin: 20px auto 0px auto;
-	width: 760px;
 	background-color:#E5E4E2;
 	border: 1px solid #000000
-}
-.gmap{
-	float:right;
-	border: 1px solid #000000;
-	margin: 30px 10px 10px 10px;
 }
 .medal-totals{
 	width: 360px;
@@ -206,6 +200,8 @@ body {
 	color: #FFFFFF;
 	vertical-align: center;
 	text-align: center;
+	font-style: italic;
+	font-size:.8em;
 }
 .medal-events tr td {
 	padding: 0px 0px 0px 0px;
@@ -217,6 +213,28 @@ body {
 	background: linear-gradient(#FFFFFF, #E5E4E2);
 	
 }
+/* Event Class */
+.event-sport{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-size:2em;
+	font-style: italic;
+}
+.event-event{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-weight: bold;	
+}
+.event-decoration{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	color: #000000;
+	width: 300px;
+	border-bottom: 1px solid #000000;
+	width: 100%;
+}
+
+
 /* unvisited link */
 a:link {
     color: #000000
