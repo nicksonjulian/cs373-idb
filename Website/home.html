@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="../../favicon.ico"> <!-- TODO icon -->
+  <link rel="icon" href="olympicrings.ico"> <!-- TODO icon -->
 
   <title>2014 Sochi Winter Olympics</title>
 
@@ -15,70 +15,125 @@
   <link href="bootstrap.min.css" rel="stylesheet"><!-- TODO-->
 
   <!-- Custom styles for this template -->
-  <link href="starter-template.css" rel="stylesheet"><!--TODO-->
+  <link href="home.css" rel="stylesheet"><!--TODO-->
 
   <body>
 
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Sochi 2014</a>
-          </div>
-
-          <div class="collapse navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="home.html">Home</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Athletes <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="meryldavis.html">Meryl Davis</a></li>
-                  <li><a href="tobiasarlt.html">Tobias Arlt</a></li>
-                  <li><a href="ireenwust.html">Ireen Wust</a></li>
-                </ul>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Countries <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="usa.html">United States</a></li>
-                  <li><a href="ger.html">Germany</a></li>
-                  <li><a href="ned.html">Netherlands</a></li>
-                </ul>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="fs-icedancefreedance.html">Figure Skating:Ice Dance Free Dance</a></li>
-                  <li><a href="l-doubles.html">Luge:Doubles</a></li>
-                  <li><a href="ss-ladies3000m.html">Speed Skating:Ladies' 3000m</a></li>
-                </ul>
-
-              </li>
-            </ul>
-
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-
-          </div><!--/.nav-collapse -->
-        </div>
-      </nav>
-
+    <!-- Start of Navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
 
-        <div class="starter-template">
-          <h1>2014 Sochi Winter Olympics</h1>
-          <p class="lead">Fillerrr</p>
+        <!-- Navbar Title -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Sochi 2014</a>
         </div>
+        
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
 
-      </div><!-- /.container -->
+            <!-- Navbar Link #1 -->
+            <li>
+              <a href="#" data-toggle="dropdown">Athletes</a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="meryldavis.html">
+                    <span class="dropdown-left">Meryl Davis</span>
+                    <span class="dropdown-right"><img src="usa_small.png" alt=""></span>
+                  </a>
+                </li>       
+                <li>
+                  <a href="tobiasarlt.html">
+                    <span class="dropdown-left">Tobias Arlt</span>
+                    <span class="dropdown-right"><img src="ger_small.png" alt=""></span>
+                  </a>  
+                </li>
+                <li>
+                  <a href="ireenwust.html">
+                    <span class="dropdown-left">Ireen Wust</span>
+                    <span class="dropdown-right"><img src="nld_small.png" alt=""></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Navbar Link #2 -->
+            <li>
+              <a href="#" data-toggle="dropdown">Countries</a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="usa.html">
+                    <span class="dropdown-left">United States</span>
+                    <span class="dropdown-right"><img src="usa_small.png" alt=""></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="ger.html">
+                    <span class="dropdown-left">Germany</span>
+                    <span class="dropdown-right"><img src="ger_small.png" alt=""></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="ned.html">
+                    <span class="dropdown-left">Netherlands</span>
+                    <span class="dropdown-right"><img src="nld_small.png" alt=""></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Navbar Link #3 -->
+            <li>
+              <a href="#" data-toggle="dropdown">Events</a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="fs-icedancefreedance.html">
+                    <span class="dropdown-left"><img src="usa_small.png" alt=""></span>
+                    <span class="dropdown-left">FS:Ice Dance Free Dance</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="l-doubles.html">
+                    <span class="dropdown-left"><img src="usa_small.png" alt=""></span>
+                    <span class="dropdown-left">Luge:Doubles</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="ss-ladies3000m.html">
+                    <span class="dropdown-left"><img src="usa_small.png" alt=""></span>
+                    <span class="dropdown-left">SS:Ladies' 3000m</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Search bar -->
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <button type="submit" class="btn btn-default">Search</button>
+            </form>
+            <!-- End of Search bar -->
+            
+          </ul>  
+        </div> <!-- Close Collapse -->
+      </div> <!-- Close Container -->
+    </nav> <!-- End of Navbar -->
+
+    <!-- Start of Content -->
+    <div class="header">
+
+      <!-- Left Side -->
+      <img class="logo" src="sochilogo.png" alt="Sochi 2014">
+      
+    </div>
+
+      <!-- Start of Body -->
+      <div class="content">
+        <p class="group-name">4 is better than 6</p>
+        <p>Ardhimas Kamdani<br>Stewart Johnson<br>Austin Hooper<br>Nickson Dalimantara</p>
+      </div>
 
 
     <!-- Bootstrap core JavaScript
