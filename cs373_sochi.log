@@ -1,0 +1,222 @@
+commit 81c0b6776d1d52bd2c6a78766211d91f77330a4c
+Author: atlus7 <nicksonjulian@yahoo.com.sg>
+Date:   Thu Jul 10 23:27:53 2014 -0500
+
+    added technical report
+
+commit c3ccb31f48d8cfa7bad36d29fc45c9e113aa6271
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Thu Jul 10 23:23:59 2014 -0500
+
+    Added test.out
+
+commit 62af94acb2216778d1c75e2cac92a9517148467a
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Fri Jul 11 04:11:43 2014 +0000
+
+    Finished hooking Django up to Pythonanywhere
+
+commit c4516ccc3969c52171a871183ed47ab31eff99a5
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Fri Jul 11 02:32:50 2014 +0000
+
+    setup
+
+commit 5bddb6ad8e92c9a4e9996334406c495dc9827434
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Thu Jul 10 21:18:17 2014 -0500
+
+    Stuff
+
+commit f2a930240674ca2c0579ffa894e822778799efcb
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Thu Jul 10 21:17:39 2014 -0500
+
+    fixed icons, added video to athlete pages
+
+commit a38dfffd56bd657cb59ebbabed9ae77b03f0b35c
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Thu Jul 10 21:07:32 2014 -0500
+
+    setting django up for pythonanywhere push
+
+commit aa24c7f40436a0dd2b18b0d3bb534ca5c4761674
+Author: Stewart Johnson <shjohnson01@gmail.com>
+Date:   Thu Jul 10 21:06:21 2014 -0500
+
+    fixed home link on all pages
+
+commit 80615f4f10029f762dda218dd0c73c19c051524f
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Thu Jul 10 20:58:58 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 943cbc4b69c33fe199e903e646cb3c3052c9eba6
+Author: Stewart Johnson <shjohnson01@gmail.com>
+Date:   Thu Jul 10 20:42:17 2014 -0500
+
+    fixed home page
+
+commit 85200a29d87194ec8b199c3914eb3318e0913fbd
+Author: Stewart Johnson <shjohnson01@gmail.com>
+Date:   Thu Jul 10 20:36:35 2014 -0500
+
+    Fixed navbar bug on usa.html
+
+commit d0f1b5f6970e5b107cf68179171f24c0af284199
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Thu Jul 10 20:01:43 2014 -0500
+
+    got host url
+
+commit e1d60ef40d971f81861efe9862cc85572dfc60fe
+Author: Stewart Johnson <shjohnson01@gmail.com>
+Date:   Thu Jul 10 19:55:09 2014 -0500
+
+    revised style sheets
+
+commit b2491e581c3c0cd930b51dc1477e787972a3a354
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Thu Jul 10 19:49:07 2014 -0500
+
+    added home page
+
+commit e2ca1523c40ef6bdac27a110ab1d42d4a44b6e30
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Thu Jul 10 18:54:36 2014 -0500
+
+    added icon, improved country pages and css
+
+commit 2a1b26f7e2d7141a9bbcd7a73690129e4525c8b2
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Thu Jul 10 16:46:41 2014 -0500
+
+    transferring to revised style
+
+commit 6c5662d3f7fdf3a6499a45fd0b65e33f924adb71
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Thu Jul 10 15:49:22 2014 -0500
+
+    Hooked up remaining athlete pages to django
+
+commit 834cf7d7fa730d5ef9bb698be072c52ea85f269c
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Wed Jul 9 21:24:29 2014 -0500
+
+    Working on hooking static pages to Django
+
+commit 4fd2652fb2e6225a72593f34d745425cc6f60843
+Author: atlus7 <nicksonjulian@yahoo.com.sg>
+Date:   Wed Jul 9 20:47:41 2014 -0500
+
+    fixed diagram
+
+commit ec93a7142f59ba41db00b34ff6ce827e3b76a264
+Author: atlus7 <nicksonjulian@yahoo.com.sg>
+Date:   Wed Jul 9 19:38:47 2014 -0500
+
+    added uml diagram
+
+commit cad920855fc94d4f568008e101ae0ba9aba3f7c7
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Wed Jul 9 19:02:37 2014 -0500
+
+    Added links to event pages
+
+commit f93c711b48d86dc04eacdc883a35be271620b3ad
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Wed Jul 9 18:55:09 2014 -0500
+
+    Added basic information to event and country pages
+
+commit 22a960903aada16dd4e18ad1594924abeea16a5a
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Wed Jul 9 18:04:27 2014 -0500
+
+    Should be everything. For now..
+
+commit 72ee7eb680f54dfd5fc5d4dac51e0cc88e247552
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Wed Jul 9 17:16:31 2014 -0500
+
+    Finished athletes documentation?
+
+commit ef58fd3fb6b9af1262c9ee602d2a81c5b160f1c4
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Wed Jul 9 17:12:31 2014 -0500
+
+    Completed the remaining two athlete pages using current format
+
+commit 0fd9b3b51196e4733d358a9264d593093d6657c8
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Wed Jul 9 16:29:41 2014 -0500
+
+    Added desciption
+
+commit 58730be5938176d78bb768ea937be7ea67f9298d
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Tue Jul 8 21:01:25 2014 -0500
+
+    end of day 2
+
+commit 42fc9cefe9ec652c826860a2b4fbf18318c41b7a
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Tue Jul 8 20:35:41 2014 -0500
+
+    added stylesheet and formatted athlete page
+
+commit bb1a4c939a7ab7cb0d68ccd3d3973c3a3c31b872
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Tue Jul 8 18:58:01 2014 -0500
+
+    Added tests for models. Closes #4
+
+commit 29cbf5f148a1576a2b41510061fa83a143d345b7
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Tue Jul 8 18:05:07 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 381eab68e1de0ae00ae8d1b449bfe8308f71fe0b
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Tue Jul 8 17:10:22 2014 -0500
+
+    html skeleton first commit
+
+commit 21c02adc6e73c8805131c317e9f7aa3e568576d6
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Tue Jul 8 17:00:24 2014 -0500
+
+    Added the skeleton for placing static html pages.
+
+commit 05375e20c0c6322414455bd30ba09643c429c337
+Author: atlus7 <nicksonjulian@yahoo.com.sg>
+Date:   Mon Jul 7 20:28:10 2014 -0500
+
+    add technical report
+
+commit 1f2b07d3dbb7bf33bd2d1572d4fa14307c1a9072
+Merge: 11934ce f191b5d
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Mon Jul 7 20:10:31 2014 -0500
+
+    Skeleton code, added basic models
+
+commit 11934ce8c05f8ce261e98cebe964a048b5194f5d
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Mon Jul 7 20:03:50 2014 -0500
+
+    First skeleton code, includes basic models
+
+commit f191b5dba5135574c1148783c4737da7a2bc59d4
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Mon Jul 7 15:53:01 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit b2c5b78a08014671791948988247636b79edf1df
+Author: nicksonjulian <nicksonjulian@utexas.edu>
+Date:   Thu Jul 3 15:17:17 2014 -0500
+
+    Initial commit
