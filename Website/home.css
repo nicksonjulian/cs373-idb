@@ -40,9 +40,9 @@ body {
 	color:#3090C7;
 }
 .dropdown-right{
-	float:right;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 5px 0px 5px;
+	color:#3090C7;
 }
 .navbar{
 	background: linear-gradient(#3090C7, #357EC7);
