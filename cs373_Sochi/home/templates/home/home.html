@@ -2,25 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    #map_canvas {
-      width: 300px;
-      height: 300px;
-    }
-  </style>
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <script>
-    function initialize() {
-      var map_canvas = document.getElementById('map_canvas');
-      var map_options = {
-        center: new google.maps.LatLng(37.6,-95.665),
-        zoom: 3,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      }
-      var map = new google.maps.Map(map_canvas, map_options)
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +15,7 @@
   <link href="/static/athlete/bootstrap.min.css" rel="stylesheet"><!-- TODO-->
 
   <!-- Custom styles for this template -->
-  <link href="/static/athlete/countrystyle.css" rel="stylesheet"><!--TODO-->
+  <link href="/static/athlete/home.css" rel="stylesheet"><!--TODO-->
 
   <body>
 
@@ -44,7 +25,7 @@
 
     <!-- Navbar Title -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="home.html">Sochi 2014</a>
+      <a class="navbar-brand" href="http://ajhooper.pythonanywhere.com/home/">Sochi 2014</a>
     </div>
 
     <!-- Navbar Links -->
@@ -139,65 +120,20 @@
     </div> <!-- Close Collapse -->
     </div> <!-- Close Container -->
   </nav> <!-- End of Navbar -->
+
     <!-- Start of Content -->
     <div class="header">
 
       <!-- Left Side -->
-      <img class="flag" src="/static/athlete/images/usa.png" alt="United States">
-      <h1 class="country-name">United States</h1 >
-        <hr class="country-decoration">
-        <p>The United States has competed at every edition of the Olympic Winter Games, and has hosted the Games on a record four occasions.</p>
-        <p>The United States collected its greatest gold medal haul at the 2002 Salt Lake City Games, winning 10 gold. Four years ago in Vancouver the US team finished with its biggest overall medal haul in winter Olympic history, with a total of 37 medals, including nine gold.</p>
-        <hr class="header-decoration">
+      <img class="logo" src="/static/athlete/images/sochilogo.png" alt="Sochi 2014">
+
     </div>
 
       <!-- Start of Body -->
       <div class="content">
-        <div class="gmap" id="map_canvas"></div>
-        <table class="medal-totals">
-          <h3>Athletes</h3>
-          <tr>
-           <th>Name</th>
-           <th class="gold">Gold</th>
-           <th class="silver">Silver</th>
-           <th class="bronze">Bronze</th>
-           <th class="total">Total</th>
-         </tr>
-         <tr>
-           <td><a href="http://ajhooper.pythonanywhere.com/athlete/meryldavis/">Meryl Davis</a></th>
-             <td>1</td>
-             <td>-</td>
-             <td>1</td>
-             <td>2</td>
-           </tr>
-           <tr>
-             <th class="total">Total</th>
-             <td>9</td>
-             <td>7</td>
-             <td>12</td>
-             <td>28</td>
-             </tr
-           </table>
-
-           <table class="medal-events">
-            <h3>Events Placed</h3>
-            <tr>
-              <th>Gold</th>
-              <td><div><a href="http://ajhooper.pythonanywhere.com/event/fsicedancefreedance/">Figure Skating:Ice Dance Free Dance</a></div> <div>Alpine Skiing:Men's Giant Slalom</div>
-               <div>Freestyle Skiing:Men's Ski Slopestyle</div></td>
-             </tr>
-             <tr>
-              <th>Silver</th>
-              <td><div>Alpine Skiing:Men's Super-G</div> <div>Ice Hockey:Women's</div> <div>Skeleton:Women's</div></td>
-            </tr>
-            <tr>
-              <th>Bronze</th>
-              <td><div>Bobsleigh:Four-man</div> <div>Snowboard:Ladies' Halfpipe</div> <div>Snowboard:Men's Snowboard Cross </div></td>
-            </tr>
-          </table>
-
-
-        </div><!-- /.container -->
+        <p class="group-name">4 is better than 6</p>
+        <p>Ardhimas Kamdani<br>Stewart Johnson<br>Austin Hooper<br>Nickson Dalimantara</p>
+      </div>
 
 
     <!-- Bootstrap core JavaScript

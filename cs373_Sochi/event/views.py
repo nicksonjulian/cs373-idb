@@ -5,7 +5,7 @@ def index(request):
     return HttpResponse("Select an event.")
 
 def detail(request, event_id):
-    return HttpResponse("You're looking at athlete %s." % athlete_id)
+    return HttpResponse("You're looking at athlete.")
 
 def ldoubles(request):
     return render_to_response('event/l-doubles.html')
