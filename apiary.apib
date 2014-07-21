@@ -34,8 +34,6 @@ Returns a list of all athletes and their ids.
                 "ID=Athletes":["1=Meryl Davis","2=Tobias Arit","3=Ireen Wust"]
             }
 
-+ Response 204
-
 
 ## /athletes/{id}
 ### Retrieve an Athlete [GET]
@@ -63,6 +61,15 @@ Returns the details of an athlete.
                 "Gold Medals":["Speed Skating:Ladies' 3000m", "Speed Skating:Ladies' Team Pursuit"]
                 "Silver Medals":["Speed Skating:Ladies' 1000m", "Speed Skating:Ladies' 1500m", "Speed Skating:Ladies' 5000m"]
                 "Bronze Medals":[]
+            }
+            
++ Response 404 (application/json)
+
+    + Body
+    
+            {
+                "message":"error",
+                "errors":["Requested record was not found"]
             }
 
 # Group Countries
@@ -113,6 +120,14 @@ Returns a list of countries and their ids.
                 "Sports participated in Sochi":""
             }
     
++ Response 404 (application/json)
+
+    + Body
+    
+            {
+                "message":"error",
+                "errors":["Requested record was not found"]
+            }
 
 # Group Events
 Events related resources. An event has the following attributes:
@@ -153,4 +168,13 @@ Events related resources. An event has the following attributes:
                 "Gold Medalist":["Ireen Wust"],
                 "Silver Medalist":["Martina Sablikova"],
                 "Bronze Medalist":["Olga Graf"]
+            }
+
++ Response 404 (application/json)
+
+    + Body
+    
+            {
+                "message":"error",
+                "errors":["Requested record was not found"]
             }
