@@ -61,8 +61,11 @@ WSGI_APPLICATION = 'cs373_Sochi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'ajhooper$cs373-Sochi',
+        'USER': 'ajhooper',
+        'PASSWORD': 'bumbershoot',
+        'HOST': 'mysql.server',
     }
 }
 
