@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="olyrings.ico"> <!-- TODO icon -->
+
+  <title>2014 Sochi Winter Olympics</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/athlete/bootstrap.min.css" rel="stylesheet"><!-- TODO-->
+
+  <!-- Custom styles for this template -->
+  <link href="/static/athlete/athletestyle.css" rel="stylesheet"><!--TODO-->
+
+  <body>
+
+    <!-- Start of Navbar-->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+
+    <!-- Navbar Title -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://ajhooper.pythonanywhere.com/home/">Sochi 2014</a>
+    </div>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+
+        <!-- Navbar Link #1 -->
+        <li>
+          <a href="#" data-toggle="dropdown">Athletes</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/athlete/meryldavis/">
+                <span class="dropdown-left"><img src="/static/athlete/images/usa_small.png" alt=""></span>
+                <span class="dropdown-right">Meryl Davis</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/athlete/tobiasarlt/">
+                <span class="dropdown-left"><img src="/static/athlete/images/ger_small.png" alt=""></span>
+                <span class="dropdown-right">Tobias Arlt</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/athlete/ireenwust/">
+                <span class="dropdown-left"><img src="/static/athlete/images/ned_small.png" alt=""></span>
+                <span class="dropdown-right">Ireen Wust</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Navbar Link #2 -->
+        <li>
+          <a href="#" data-toggle="dropdown">Countries</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/country/usa/">
+              <span class="dropdown-left"><img src="/static/athlete/images/usa_small.png" alt=""></span>
+              <span class="dropdown-right">United States</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/country/germany/">
+              <span class="dropdown-left"><img src="/static/athlete/images/ger_small.png" alt=""></span>
+              <span class="dropdown-right">Germany</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/country/netherlands/">
+              <span class="dropdown-left"><img src="/static/athlete/images/ned_small.png" alt=""></span>
+              <span class="dropdown-right">Netherlands</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Navbar Link #3 -->
+        <li>
+          <a href="#" data-toggle="dropdown">Events</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/event/fsicedancefreedance/">
+              <span class="dropdown-left"><img src="/static/athlete/images/fs_icon_small.png" alt=""></span>
+              <span class="dropdown-right">FS:Ice Dance Free Dance</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/event/ldoubles/">
+              <span class="dropdown-left"><img src="/static/athlete/images/l_icon_small.png" alt=""></span>
+              <span class="dropdown-right">Luge:Doubles</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://ajhooper.pythonanywhere.com/event/ssladies3000m/">
+              <span class="dropdown-left"><img src="/static/athlete/images/ss_icon_small.png" alt=""></span>
+              <span class="dropdown-right">SS:Ladies' 3000m</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+      <!-- Search bar -->
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+        <input type="text" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+      <!-- End of Search bar -->
+
+      </ul>
+    </div> <!-- Close Collapse -->
+    </div> <!-- Close Container -->
+  </nav> <!-- End of Navbar -->
+
+
+	<!-- Start of Content -->
+	<div class="header">
+
+		<!-- Left Side -->
+		<img class="athlete-pic" src="/static/athlete/images/meryldavis.png" alt="Meryl Davis">
+		<a href="http://ajhooper.pythonanywhere.com/country/usa/"><img class="flag" src="/static/athlete/images/usa.png" alt="United States"></a>
+		<h6 class="athlete-firstname">{{ athlete.first_name }}</h6>
+		<hr class="athlete-decoration">
+		<h1 class="athlete-lastname"> {{ athlete.last_name }}</h1>
+		<table class="athlete-info">
+	        <tr>
+	          	<th>Gender</th>
+	          	<td>{{ athlete.gender }}</td>
+	        </tr>
+	        <tr>
+	          	<th>Nationality</th>
+	          	<td><a href="http://ajhooper.pythonanywhere.com/country/usa/">{{ athlete.country }}</a></td>
+	        </tr>
+	        <tr>
+	          	<th>Birthday</th>
+	          	<td>{{ athlete.birthdate }}</td>
+	        </tr>
+	        <tr>
+	          	<th>Age</th>
+	          	<td>27</td>
+	        </tr>
+	        <tr>
+		        <th>Height</th>
+		        <td>1.60m (5'3")</td>
+	        </tr>
+	        <tr>
+		        <th>Weight</th>
+		        <td>-</td>
+	        </tr>
+	    </table>
+		<hr class="header-decoration">
+	</div> <!-- End of Header -->
+
+	<!-- Start of Body -->
+		<div class="content">
+		<embed width="330"
+src="https://www.youtube.com/v/w9yX3S9VdtI"
+type="application/x-shockwave-flash" style="float:right">
+			<table class="medal-totals">
+                    <tr>
+                      <th class="gold">Gold</th>
+                      <th class="silver">Silver</th>
+                      <th class="bronze">Bronze</th>
+                      <th class="total">Total</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        {{athlete.gold_medals.all|length }}
+                      </td>
+                      <td>
+                        {{athlete.silver_medals.all|length }}
+                      </td>
+                      <td>
+                        {{athlete.bronze_medals.all|length }}
+                      </td>
+                      <td>
+                      {% with name= greeting="Hello" %}
+                        {{ greeting }} {{name}}
+                      {% endwith %}
+                      {{athlete.gold_medals.all|length|add:athlete.silver_medals.all|length }} + {{athlete.bronze_medals.all|length }}</td>
+                    </tr>
+                  </table>
+			<table class="medal-events">
+				<tr>
+					<th>Gold</th>
+					    {% for event in athlete.gold_medals.all %}
+                            <td>{{ event.name }}</td>
+                        {% endfor %}
+				</tr>
+				<tr>
+					<th>Silver</th>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th>Bronze</th>
+					<td>Figure Skating:Team Ice Dance Free Dance</td>
+				</tr>
+			</table>
+		</div>
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="/static/athlete/bootstrap.min.js"></script>
+  </body>
+  </html>

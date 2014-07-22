@@ -1,8 +1,8 @@
 from django.db import models
 
 class Athlete(models.Model):
-    MALE = 'M'
-    FEMALE = 'F'
+    MALE = 'Male'
+    FEMALE = 'Female'
     GENDER_CHOICES = (
         ('', 'None'),
         (MALE, 'Male'),
@@ -13,7 +13,7 @@ class Athlete(models.Model):
     last_name = models.CharField(max_length=30)
     country =  models.ForeignKey('Country')
     #Need to check that this is correct
-    gender = models.CharField(max_length=1,
+    gender = models.CharField(max_length=10,
                               choices=GENDER_CHOICES,
                               default='')
     birthdate = models.DateField(blank=True, null=True)

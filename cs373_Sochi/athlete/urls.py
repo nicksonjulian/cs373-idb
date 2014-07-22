@@ -7,5 +7,5 @@ urlpatterns = patterns('',
     url(r'^ireenwust/', views.ireen, name='ireen'),
     url(r'^tobiasarlt/', views.tobias, name='tobias'),
     url(r'^meryldavis/', views.meryl, name='meryl'),
-    #url(r'^(?P<athlete_id>\d+)/$', views.detail, name='detail'),
+    url(r'^(?P<athlete_id>\d+)/$', views.detail, name='detail'),
 )
