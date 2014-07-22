@@ -43,6 +43,10 @@ class Country(models.Model):
     total_silver_medals = models.IntegerField(blank=True, null=True)
     total_bronze_medals = models.IntegerField(blank=True, null=True)
     athletes = models.ManyToManyField(Athlete, blank=True, null=True, related_name='country_athletes')
+    coodx = models.FloatField(blank=True, null=True)
+    coody = models.FloatField(blank=True, null=True)
+    coodz = models.IntegerField(blank=True, null=True)
+
     #For Events with medals, load dynamically (?)
 
     def __str__(self):

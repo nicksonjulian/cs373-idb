@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'athlete',
     'country',
     'event',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,6 +70,8 @@ DATABASES = {
     }
 }
 
+SOUTH_DATABASE_ADAPTERS = { 'default' : 'south.db.mysql' }
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -87,4 +90,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_ROOT = '/home/ajhooper/cs373-idb/cs373_Sochi/static/'
-STATIC_URL = '/home/ajhooper/cs373-idb/cs373_Sochi/static/'
+STATIC_URL = '/static/'
