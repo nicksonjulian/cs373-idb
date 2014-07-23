@@ -44,7 +44,6 @@ class Events(models.Model):
 class Country(models.Model):
     name = models.CharField(max_length=150)
     description = models.CharField(max_length=500)
-    #TODO: Dynamically find total medals
     total_gold_medals = models.IntegerField(blank=True, null=True)
     total_silver_medals = models.IntegerField(blank=True, null=True)
     total_bronze_medals = models.IntegerField(blank=True, null=True)

@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^ldoubles/', views.ldoubles, name='ldoubles'),
     url(r'^ssladies3000m/', views.ssladies3000m, name='ssladies3000m'),
     url(r'^fsicedancefreedance/', views.fsicedancefreedance, name='fsdance'),
+    url(r'^(?P<event_id>\d+)/$', views.detail, name='detail'),
 )

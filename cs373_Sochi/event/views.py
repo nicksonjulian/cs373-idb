@@ -1,11 +1,10 @@
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
+
+from home.models import Events
 
 def index(request):
     return HttpResponse("Select an event.")
-
-def detail(request, event_id):
-    return HttpResponse("You're looking at athlete.")
 
 def ldoubles(request):
     return render_to_response('event/l-doubles.html')
@@ -16,3 +15,18 @@ def fsicedancefreedance(request):
 def ssladies3000m(request):
     return render_to_response('event/ss-ladies3000m.html')
 
+def detail(request, event_id):
+    if (event_id == "0"):
+        event = Events.objects.get(name="Luge Doubles")
+        context = {'event': event, 'icon': "/static/athlete/images/l_icon.png"}
+        return render(request, 'event/dynamic_event.html', context)
+    elif (event_id == "1"):
+        event = Events.objects.get(name="Ice Dance Free Dance")
+        context = {'event': event, 'icon': "/static/athlete/images/fs_icon.png"}
+        return render(request, 'event/dynamic_event.html', context)
+    elif (event_id == "2"):
+        event = Events.objects.get(name="Ladies' 3000m")
+        context = {'event': event, 'icon': "/static/athlete/images/ss_icon.png"}
+        return render(request, 'event/dynamic_event.html', context)
+    else:
+        return HttpResponse("You're looking at event %s." % event_id)
