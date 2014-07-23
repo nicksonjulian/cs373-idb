@@ -126,8 +126,8 @@
 	<div class="header">
 
 		<!-- Left Side -->
-		<img class="athlete-pic" src="/static/athlete/images/meryldavis.png" alt="Meryl Davis">
-		<a href="http://ajhooper.pythonanywhere.com/country/usa/"><img class="flag" src="/static/athlete/images/usa.png" alt="United States"></a>
+		<img class="athlete-pic" src={{picture}} alt="Meryl Davis">
+		<a href="http://ajhooper.pythonanywhere.com/country/usa/"><img class="flag" src={{flag}} alt="United States"></a>
 		<h6 class="athlete-firstname">{{ athlete.first_name }}</h6>
 		<hr class="athlete-decoration">
 		<h1 class="athlete-lastname"> {{ athlete.last_name }}</h1>
@@ -163,7 +163,7 @@
 	<!-- Start of Body -->
 		<div class="content">
 		<embed width="330"
-src="https://www.youtube.com/v/w9yX3S9VdtI"
+src={{video}}
 type="application/x-shockwave-flash" style="float:right">
 			<table class="medal-totals">
                     <tr>
@@ -183,27 +183,38 @@ type="application/x-shockwave-flash" style="float:right">
                         {{athlete.bronze_medals.all|length }}
                       </td>
                       <td>
-                      {% with name= greeting="Hello" %}
-                        {{ greeting }} {{name}}
-                      {% endwith %}
-                      {{athlete.gold_medals.all|length|add:athlete.silver_medals.all|length }} + {{athlete.bronze_medals.all|length }}</td>
+                        {{ athlete.gold_medals.all.count|add:athlete.silver_medals.all.count|add:athlete.bronze_medals.all.count }}
+                      </td>
                     </tr>
                   </table>
 			<table class="medal-events">
 				<tr>
 					<th>Gold</th>
+						{% if athlete.gold_medals.all.count == 0 %}
+					        <td>&nbsp;</td>
+					    {% endif %}
 					    {% for event in athlete.gold_medals.all %}
                             <td>{{ event.name }}</td>
                         {% endfor %}
 				</tr>
 				<tr>
 					<th>Silver</th>
-					<td>&nbsp;</td>
+					    {% if athlete.silver_medals.all.count == 0 %}
+					        <td>&nbsp;</td>
+					    {% endif %}
+					    {% for event in athlete.silver_medals.all %}
+                            <td>{{ event.name }}</td>
+                        {% endfor %}
 				</tr>
 				<tr>
 					<th>Bronze</th>
-					<td>Figure Skating:Team Ice Dance Free Dance</td>
-				</tr>
+						{% if athlete.bronze_medals.all.count == 0 %}
+					        <td>&nbsp;</td>
+					    {% endif %}
+					    {% for event in athlete.bronze_medals.all %}
+                            <td>{{ event.name }}</td>
+                        {% endfor %}
+                </tr>
 			</table>
 		</div>
 
