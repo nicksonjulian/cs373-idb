@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+{% load stringify %}
+
   <style>
     #map_canvas {
       width: 300px;
@@ -9,12 +12,13 @@
     }
   </style>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
+
   <script>
     function initialize() {
       var map_canvas = document.getElementById('map_canvas');
       var map_options = {
-        center: new google.maps.LatLng({{country.coodx}},{{country.coody}}),
-        zoom: {{country.coodz}},
+        center: new google.maps.LatLng({{country.coordx}},{{country.coordy}}),
+        zoom: {{country.coordz}},
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
       var map = new google.maps.Map(map_canvas, map_options)
@@ -26,7 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="olyrings.ico"> <!-- TODO icon -->
+  <link rel="icon" href="olyrings.icon"> <!-- TODO icon -->
 
   <title>2014 Sochi Winter Olympics</title>
 
@@ -44,7 +48,7 @@
 
     <!-- Navbar Title -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="home.html">Sochi 2014</a>
+      <a class="navbar-brand" href="http://ajhooper.pythonanywhere.com/home/">Sochi 2014</a>
     </div>
 
     <!-- Navbar Links -->
@@ -56,19 +60,19 @@
           <a href="#" data-toggle="dropdown">Athletes</a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="http://ajhooper.pythonanywhere.com/athlete/meryldavis/">
+              <a href="http://ajhooper.pythonanywhere.com/athlete/meryl_davis/">
                 <span class="dropdown-left"><img src="/static/athlete/images/usa_small.png" alt=""></span>
                 <span class="dropdown-right">Meryl Davis</span>
               </a>
             </li>
             <li>
-              <a href="http://ajhooper.pythonanywhere.com/athlete/tobiasarlt/">
+              <a href="http://ajhooper.pythonanywhere.com/athlete/tobias_arlt/">
                 <span class="dropdown-left"><img src="/static/athlete/images/ger_small.png" alt=""></span>
                 <span class="dropdown-right">Tobias Arlt</span>
               </a>
             </li>
             <li>
-              <a href="http://ajhooper.pythonanywhere.com/athlete/ireenwust/">
+              <a href="http://ajhooper.pythonanywhere.com/athlete/ireen_wust/">
                 <span class="dropdown-left"><img src="/static/athlete/images/ned_small.png" alt=""></span>
                 <span class="dropdown-right">Ireen Wust</span>
               </a>
@@ -81,7 +85,7 @@
           <a href="#" data-toggle="dropdown">Countries</a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="http://ajhooper.pythonanywhere.com/country/usa/">
+              <a href="http://ajhooper.pythonanywhere.com/country/united_states/">
               <span class="dropdown-left"><img src="/static/athlete/images/usa_small.png" alt=""></span>
               <span class="dropdown-right">United States</span>
               </a>
@@ -106,19 +110,19 @@
           <a href="#" data-toggle="dropdown">Events</a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="http://ajhooper.pythonanywhere.com/event/fsicedancefreedance/">
+              <a href="http://ajhooper.pythonanywhere.com/event/figure_skating_ice_dance_free_dance/">
               <span class="dropdown-left"><img src="/static/athlete/images/fs_icon_small.png" alt=""></span>
               <span class="dropdown-right">FS:Ice Dance Free Dance</span>
               </a>
             </li>
             <li>
-              <a href="http://ajhooper.pythonanywhere.com/event/ldoubles/">
+              <a href="http://ajhooper.pythonanywhere.com/event/luge_luge_doubles/">
               <span class="dropdown-left"><img src="/static/athlete/images/l_icon_small.png" alt=""></span>
               <span class="dropdown-right">Luge:Doubles</span>
               </a>
             </li>
             <li>
-              <a href="http://ajhooper.pythonanywhere.com/event/ssladies3000m/">
+              <a href="http://ajhooper.pythonanywhere.com/event/speed_skating_ladies_3000m/">
               <span class="dropdown-left"><img src="/static/athlete/images/ss_icon_small.png" alt=""></span>
               <span class="dropdown-right">SS:Ladies' 3000m</span>
               </a>
@@ -165,7 +169,7 @@
           </tr>
           <tr>
             {% for athlete in country.athletes.all %}
-                <td>{{athlete.first_name}} {{athlete.last_name}}</td>
+                <td><a href={{"/athlete/"|add:athlete.first_name|add:" "|add:athlete.last_name|stringify}}> {{athlete.first_name}} {{athlete.last_name}} </a></td>
                 <td>{{athlete.gold_medals.all|length}}</td>
                 <td>{{athlete.silver_medals.all|length}}</td>
                 <td>{{athlete.bronze_medals.all|length}}</td>
@@ -177,7 +181,7 @@
            <td>{{country.total_gold_medals}}</td>
            <td>{{country.total_silver_medals}}</td>
            <td>{{country.total_bronze_medals}}</td>
-           <td>{{ country.total_gold_medals|add:country.total_silver_medals|add:country.total_bronze_medals }}</td>
+           <td>{{country.total_gold_medals|add:country.total_silver_medals|add:country.total_bronze_medals }}</td>
          </tr>
        </table>
 
@@ -185,16 +189,33 @@
         <h3>Events Placed</h3>
         <tr>
           <th>Gold</th>
-          <td><div><a href="http://ajhooper.pythonanywhere.com/event/ldoubles/">Luge:Doubles</a></div> <div>Alpine Skiing:Women's Super Combined Slalom</div> <div>Nordic Combined:Individual Gundersen NH/10km</div>
-           <div>Cross-Country</div></td>
+          <td>
+            {% for athlete in country.athletes.all %}
+                {% for event in athlete.gold_medals.all %}
+                <div><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
+                {% endfor %}
+            {% endfor %}
+          </td>
          </tr>
          <tr>
           <th>Silver</th>
-          <td><div> Snowboard:Ladies' Parallel Slalom</div> <div>Alpine Skiing:Women's Super-G</div> <div>Biathlon:Men's Individual 20 km</div></td>
+          <td>
+            {% for athlete in country.athletes.all %}
+                {% for event in athlete.silver_medals.all %}
+                <div><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
+                {% endfor %}
+            {% endfor %}
+          </td>
         </tr>
         <tr>
           <th>Bronze</th>
-          <td><div>Figure Skating:Pairs Free Skating</div> <div>Cross-Country:Ladies' Relay 4x5km</div> <div>Alpine Skiing:Women's Giant Slalom</div></td>
+          <td>
+            {% for athlete in country.athletes.all %}
+                {% for event in athlete.bronze_medals.all %}
+                <div><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
+                {% endfor %}
+            {% endfor %}
+          </td>
         </tr>
       </table>
 

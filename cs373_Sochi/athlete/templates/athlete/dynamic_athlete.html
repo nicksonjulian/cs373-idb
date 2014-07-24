@@ -1,6 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+{% load calculate_age %}
+{% load stringify %}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -127,7 +131,7 @@
 
 		<!-- Left Side -->
 		<img class="athlete-pic" src={{picture}} alt="Meryl Davis">
-		<a href="http://ajhooper.pythonanywhere.com/country/usa/"><img class="flag" src={{flag}} alt="United States"></a>
+		<a href={{"/country/"|add:athlete.country.name|stringify}}><img class="flag" src={{flag}} alt="United States"></a>
 		<h6 class="athlete-firstname">{{ athlete.first_name }}</h6>
 		<hr class="athlete-decoration">
 		<h1 class="athlete-lastname"> {{ athlete.last_name }}</h1>
@@ -138,7 +142,7 @@
 	        </tr>
 	        <tr>
 	          	<th>Nationality</th>
-	          	<td><a href="http://ajhooper.pythonanywhere.com/country/usa/">{{ athlete.country }}</a></td>
+	          	<td><a href={{"/country/"|add:athlete.country.name|stringify}}>{{ athlete.country }}</a></td>
 	        </tr>
 	        <tr>
 	          	<th>Birthday</th>
@@ -146,15 +150,15 @@
 	        </tr>
 	        <tr>
 	          	<th>Age</th>
-	          	<td>27</td>
+	          	<td>{{athlete.birthdate|age}}</td>
 	        </tr>
 	        <tr>
 		        <th>Height</th>
-		        <td>1.60m (5'3")</td>
+		        <td>{{athlete.height}}</td>
 	        </tr>
 	        <tr>
 		        <th>Weight</th>
-		        <td>-</td>
+		        <td>{{athlete.weight}}</td>
 	        </tr>
 	    </table>
 		<hr class="header-decoration">
@@ -194,7 +198,7 @@ type="application/x-shockwave-flash" style="float:right">
 					        <td>&nbsp;</td>
 					    {% endif %}
 					    {% for event in athlete.gold_medals.all %}
-                            <td>{{ event.name }}</td>
+                            <td><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
                         {% endfor %}
 				</tr>
 				<tr>
@@ -203,7 +207,7 @@ type="application/x-shockwave-flash" style="float:right">
 					        <td>&nbsp;</td>
 					    {% endif %}
 					    {% for event in athlete.silver_medals.all %}
-                            <td>{{ event.name }}</td>
+                            <td><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
                         {% endfor %}
 				</tr>
 				<tr>
@@ -212,7 +216,7 @@ type="application/x-shockwave-flash" style="float:right">
 					        <td>&nbsp;</td>
 					    {% endif %}
 					    {% for event in athlete.bronze_medals.all %}
-                            <td>{{ event.name }}</td>
+                            <td><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
                         {% endfor %}
                 </tr>
 			</table>

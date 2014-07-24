@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+{% load stringify %}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -143,12 +146,12 @@
 				{% else %}
                   <td>
                   {% with event.gold_medalists.all|first as first_object %}
-                    {{ first_object.country }}
+                    <a href={{"/country/"|add:first_object.country.name|stringify}}>{{ first_object.country }}</a>
                   {% endwith %}
                   </td>
 				  <td>
 	    		  {% for athlete in event.gold_medalists.all %}
-                    <div>{{athlete.first_name}} {{athlete.last_name}} </div>
+                    <div><a href={{"/athlete/"|add:athlete.first_name|add:" "|add:athlete.last_name|stringify}}>{{athlete.first_name}} {{athlete.last_name}} </a> </div>
                   {% endfor %}
                   </td>
                 {% endif %}
@@ -161,12 +164,12 @@
 				{% else %}
                   <td>
                   {% with event.silver_medalists.all|first as first_object %}
-                    {{ first_object.country }}
+                    <a href={{"/country/"|add:first_object.country.name|stringify}}>{{ first_object.country }}</a>
                   {% endwith %}
                   </td>
 				  <td>
 	    		  {% for athlete in event.silver_medalists.all %}
-                    <div>{{athlete.first_name}} {{athlete.last_name}} </div>
+                    <div><a href={{"/athlete/"|add:athlete.first_name|add:" "|add:athlete.last_name|stringify}}>{{athlete.first_name}} {{athlete.last_name}} </a> </div>
                   {% endfor %}
                   </td>
                 {% endif %}
@@ -179,12 +182,12 @@
 				{% else %}
                   <td>
                   {% with event.bronze_medalists.all|first as first_object %}
-                    {{ first_object.country }}
+                    <a href={{"/country/"|add:first_object.country.name|stringify}}>{{ first_object.country }}</a>
                   {% endwith %}
                   </td>
 				  <td>
 	    		  {% for athlete in event.bronze_medalists.all %}
-                    <div>{{athlete.first_name}} {{athlete.last_name}} </div>
+                    <div><a href={{"/athlete/"|add:athlete.first_name|add:" "|add:athlete.last_name|stringify}}>{{athlete.first_name}} {{athlete.last_name}} </a> </div>
                   {% endfor %}
                   </td>
                 {% endif %}

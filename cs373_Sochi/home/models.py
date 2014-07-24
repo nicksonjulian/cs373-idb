@@ -8,7 +8,6 @@ class Athlete(models.Model):
         (MALE, 'Male'),
         (FEMALE, 'Female'),
     )
-
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     country =  models.ForeignKey('Country')
@@ -16,6 +15,8 @@ class Athlete(models.Model):
     gender = models.CharField(max_length=10,
                               choices=GENDER_CHOICES,
                               default='')
+    height = models.CharField(max_length=30, blank=True, null=True)
+    weight = models.CharField(max_length=30, blank=True, null=True)
     birthdate = models.DateField(blank=True, null=True)
     gold_medals = models.ManyToManyField('Events', blank=True, related_name='athlete_gold')
     silver_medals = models.ManyToManyField('Events', blank=True, related_name='athlete_silver')
@@ -30,7 +31,7 @@ class Athlete(models.Model):
 class Events(models.Model):
     name = models.CharField(max_length=50)
     sport = models.CharField(max_length=50)
-    desc = models.CharField(max_length=500)
+    desc = models.CharField(max_length=1000)
     gold_medalists =  models.ManyToManyField(Athlete, blank=True, related_name='events_gold')
     silver_medalists =  models.ManyToManyField(Athlete, blank=True, related_name='events_silver')
     bronze_medalists =  models.ManyToManyField(Athlete, blank=True, related_name='events_bronze')
@@ -49,9 +50,9 @@ class Country(models.Model):
     total_bronze_medals = models.IntegerField(blank=True, null=True)
     athletes = models.ManyToManyField(Athlete, blank=True, null=True, related_name='country_athletes')
     #TODO: Rename these
-    coodx = models.FloatField(blank=True, null=True)
-    coody = models.FloatField(blank=True, null=True)
-    coodz = models.IntegerField(blank=True, null=True)
+    coordx = models.FloatField(blank=True, null=True)
+    coordy = models.FloatField(blank=True, null=True)
+    coordz = models.IntegerField(blank=True, null=True)
 
     class Meta:
         ordering = ['name']
