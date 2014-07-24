@@ -6,16 +6,16 @@ class AthleteResource(ModelResource):
 	class Meta:
 		queryset = Athlete.objects.all()
 		resource_name = 'athlete'
-		fitering = {"first_name" : ALL}
+		filtering = {"first_name" : ALL}
 
 class CountryResource(ModelResource):
 	class Meta:
 		queryset = Country.objects.all()
 		resource_name = 'country'
-		fitering = {"name" : ALL}
+		filtering = {"name" : ALL}
 
 class EventResource(ModelResource):
 	class Meta:
 		queryset = Events.objects.all()
 		resource_name = 'event'
-		fitering = {"name" : ALL}
+		filtering = {"name" : ALL}
