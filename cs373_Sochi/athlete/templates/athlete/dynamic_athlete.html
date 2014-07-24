@@ -130,8 +130,8 @@
 	<div class="header">
 
 		<!-- Left Side -->
-		<img class="athlete-pic" src={{picture}} alt="Meryl Davis">
-		<a href={{"/country/"|add:athlete.country.name|stringify}}><img class="flag" src={{flag}} alt="United States"></a>
+		<img class="athlete-pic" src={{"/static/athlete/images/"|add:athlete.picture}} alt="{{ athlete.first_name }} {{ athlete.last_name }}">
+		<a href={{"/country/"|add:athlete.country.name|stringify}}><img class="flag" src={{"/static/athlete/images/"|add:athlete.country.country_code|add:".png"}} alt={{athlete.country.name}}></a>
 		<h6 class="athlete-firstname">{{ athlete.first_name }}</h6>
 		<hr class="athlete-decoration">
 		<h1 class="athlete-lastname"> {{ athlete.last_name }}</h1>
@@ -167,7 +167,7 @@
 	<!-- Start of Body -->
 		<div class="content">
 		<embed width="330"
-src={{video}}
+src={{athlete.video}}
 type="application/x-shockwave-flash" style="float:right">
 			<table class="medal-totals">
                     <tr>
@@ -198,7 +198,7 @@ type="application/x-shockwave-flash" style="float:right">
 					        <td>&nbsp;</td>
 					    {% endif %}
 					    {% for event in athlete.gold_medals.all %}
-                            <td><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
+                            <td><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
                         {% endfor %}
 				</tr>
 				<tr>
@@ -207,7 +207,7 @@ type="application/x-shockwave-flash" style="float:right">
 					        <td>&nbsp;</td>
 					    {% endif %}
 					    {% for event in athlete.silver_medals.all %}
-                            <td><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
+                            <td><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
                         {% endfor %}
 				</tr>
 				<tr>
@@ -216,7 +216,7 @@ type="application/x-shockwave-flash" style="float:right">
 					        <td>&nbsp;</td>
 					    {% endif %}
 					    {% for event in athlete.bronze_medals.all %}
-                            <td><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
+                            <td><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
                         {% endfor %}
                 </tr>
 			</table>

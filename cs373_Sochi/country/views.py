@@ -6,27 +6,8 @@ from home.models import Country
 def index(request):
     return HttpResponse("Search for a specific country.")
 
-def usa(request):
-    return render_to_response('country/usa.html')
-
-def ger(request):
-    return render_to_response('country/ger.html')
-
-def ned(request):
-    return render_to_response('country/ned.html')
-
 def detail(request, country_id):
-    if (country_id == "germany"):
-        country = Country.objects.get(name="Germany")
-        context = {'country': country, 'flag': "/static/athlete/images/ger.png"}
+        country_name = country_id.replace("_", " ").title()
+        country = Country.objects.get(name=country_name)
+        context = {'country': country}
         return render(request, 'country/dynamic_country.html', context)
-    elif (country_id == "united_states"):
-        country = Country.objects.get(name="United States")
-        context = {'country': country, 'flag': "/static/athlete/images/usa.png"}
-        return render(request, 'country/dynamic_country.html', context)
-    elif (country_id == "netherlands"):
-        country = Country.objects.get(name="Netherlands")
-        context = {'country': country, 'flag': "/static/athlete/images/ned.png"}
-        return render(request, 'country/dynamic_country.html', context)
-    else:
-        return HttpResponse("You're looking at country %s." % country_id)

@@ -5,5 +5,5 @@ from event import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^(?P<event_id>\w+)/$', views.detail, name='detail'),
+    url(r'^(?P<sport_name>\w+)-(?P<event_name>\w+)/$', views.detail, name='detail'),
 )

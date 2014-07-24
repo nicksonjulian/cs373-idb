@@ -148,7 +148,7 @@
     <div class="header">
 
       <!-- Left Side -->
-      <img class="flag" src={{flag}} alt="Germany">
+      <img class="flag" src={{"/static/athlete/images/"|add:country.country_code|add:".png"}} alt={{country.name}}>
       <h1 class="country-name">{{country.name}}</h1 >
         <hr class="country-decoration">
         <p>{{country.description}}</p>
@@ -192,7 +192,7 @@
           <td>
             {% for athlete in country.athletes.all %}
                 {% for event in athlete.gold_medals.all %}
-                <div><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
+                <div><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
                 {% endfor %}
             {% endfor %}
           </td>
@@ -202,7 +202,7 @@
           <td>
             {% for athlete in country.athletes.all %}
                 {% for event in athlete.silver_medals.all %}
-                <div><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
+                <div><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
                 {% endfor %}
             {% endfor %}
           </td>
@@ -212,7 +212,7 @@
           <td>
             {% for athlete in country.athletes.all %}
                 {% for event in athlete.bronze_medals.all %}
-                <div><a href={{"/event/"|add:event.sport|add:" "|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
+                <div><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{ event.sport }}:{{ event.name }}</a></div>
                 {% endfor %}
             {% endfor %}
           </td>
