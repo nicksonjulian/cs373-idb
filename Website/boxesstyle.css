@@ -1,0 +1,328 @@
+body {
+	padding: 0px 0px 40px 0px;
+	margin: 0px 0px 0px 0px;
+	color:black;
+	background-color:#FFFFFF;
+	font-family: Sans-serif, serif;
+}
+
+/* Navbar Class */
+.navbar .navbar-brand{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+.navbar .nav > li > a{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+}
+.dropdown-menu li a{	
+	padding: 0px 0px 1px 0px;
+	margin: 0px 0px 0px 0px;
+}
+.dropdown-left{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 5px;
+	color:#3090C7;	
+}
+.dropdown-right{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 10px 0px 5px;
+	color:#3090C7;
+}
+.navbar{
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+}
+/* Boxes Class */
+.boxes{
+	float:left;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:30px;
+	height:160px;
+	text-align:center;
+}
+
+.flag-images{
+	max-height: 200px;
+	max-width: 200px;
+}
+ul, ol {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-color:#000
+}
+.panel{
+	margin-bottom:20px;
+	background-color:#fff;
+	border:1px solid transparent;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
+	box-shadow:0 1px 1px rgba(0,0,0,.05)
+}
+.panel-title{
+	font-weight: bold;	
+	font-family: Sans-serif, serif;
+	font-size: 200%;
+	font-style: italic;
+}
+.panel-heading{
+	padding: 20px 20px 20px 20px;
+	margin: 00px auto 0px auto;
+	background-color: #E5E4E2;
+	border-bottom: 1px solid #000000;
+}
+.panel-default{
+	margin-top:50px;
+	border-color:#ddd
+}
+/* Header Classes */
+.header{
+	width:760px;
+	padding: 20px 20px 20px 20px;
+	margin: 60px auto 0px auto;
+	background-color: #E5E4E2;
+	border: 1px solid #000000
+}
+.header-decoration{
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 0px 0px;
+	color: #000000;
+	width: 100%;
+	border-bottom: 1px solid #000000
+}
+
+/* Athlete Classes */
+.flag{
+	float:right;
+	max-width:200px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 20px;
+	border: 1px #000000 solid;
+}
+.athlete-firstname{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-size:2em;
+	font-style: italic;
+}
+.athlete-lastname{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-weight: bold;	
+}
+.athlete-info{
+	padding: 0px 0px 0px 0px;
+	margin: 13px 0px 0px 0px;
+	width: 300px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+}
+.athlete-info th{
+	padding: 0px 5px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	width: 100px;
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+	text-align:right;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	font-style: italic;
+	font-size:.8em;
+}
+.athlete-info td{
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 3px #000000 solid;
+	font-weight: bold;
+}
+.athlete-decoration{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	color: #000000;
+	width: 300px;
+	border-bottom: 1px solid #000000
+}	
+	
+/* Medal Classes */
+.content {
+	width:760px;
+	padding: 20px 20px 20px 20px;
+	margin: 20px auto 0px auto;
+	background-color:#E5E4E2;
+	border: 1px solid #000000
+}
+.medal-totals{
+	width: 360px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+.medal-totals td {
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+}
+.gold{
+	width: 90px;
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	background: linear-gradient(#FFDB58, #D4A017);
+	text-align:center;
+}
+.silver{
+	width: 90px;
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	background: linear-gradient(#E5E4E2, #B6B6B4);
+	text-align:center;
+}
+.bronze{
+	width: 90px;
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	background: linear-gradient(#EDC9AF, #CD7F32);	
+	text-align:center;
+}
+.blue{
+	padding: 0px 5px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	width: 200px;
+	background: linear-gradient(#3090C7, #357EC7);
+	color: white;
+	text-align:center;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+}
+.medalists{
+	width: 90px;
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	background: linear-gradient(#4F4F4F, #3B3B3B);
+	color: #FFFFFF;
+	text-align:center;
+}
+.medal-events {
+	width:360px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px 0px 0px 0px;
+}
+.medal-events tr th{
+	width: 89px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	background: linear-gradient(#3090C7, #357EC7);
+	color: #FFFFFF;
+	vertical-align: center;
+	text-align: center;
+	font-style: italic;
+	font-size:.8em;
+}
+.medal-events tr td {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 3px #000000 solid;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+	
+}
+/* Event Class */
+.event-icon{
+	float: right;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 00px 0px 0px;
+	border: 0px #000000 solid;
+	width:200px;
+}
+.event-sport{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-size:2em;
+	font-style: italic;
+}
+.event-event{
+	padding: 0px 0px 20px 0px;
+	margin: 0px 0px 0px 0px;
+	font-weight: bold;	
+}
+.event-decoration{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	color: #000000;
+	width: 430px;
+	border-bottom: 1px solid #000000;
+}
+.event-info td{
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	background: linear-gradient(#FFFFFF, #E5E4E2);
+	border-top: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+}
+
+
+/* unvisited link */
+a:link {
+    color: #000000
+	font-weight: bold;
+}
+
+/* visited link */
+a:visited {
+    color: #000000
+	font-weight: bold;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000000
+	font-weight: bold;
+}
+
+/* selected link */
+a:active {
+    color: #000000
+	font-weight: bold;
+}
+
