@@ -4,7 +4,9 @@ from django.shortcuts import render_to_response, render
 from home.models import Events
 
 def index(request):
-    return HttpResponse("Select an event.")
+    events = Events.objects.all()
+    context = {'events': events}
+    return render(request, 'event/eventlist.html', context)
 
 def detail(request, sport_name, event_name):
     event_name = event_name.replace("_", " ").title()

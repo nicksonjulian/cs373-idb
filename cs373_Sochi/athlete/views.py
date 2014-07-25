@@ -4,7 +4,9 @@ from django.shortcuts import render_to_response, render
 from home.models import Athlete
 
 def index(request):
-    return HttpResponse("Put list of athletes here or something")
+    athletes = Athlete.objects.all()
+    context = {'athletes': athletes}
+    return render(request, 'athlete/athletelist.html', context)
 
 def detail(request, athlete_id):
     name = athlete_id.split("_")

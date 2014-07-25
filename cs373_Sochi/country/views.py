@@ -4,7 +4,9 @@ from django.shortcuts import render_to_response, render
 from home.models import Country
 
 def index(request):
-    return HttpResponse("Search for a specific country.")
+    countries = Country.objects.all()
+    context = {'countries': countries}
+    return render(request, 'country/countrylist.html', context)
 
 def detail(request, country_id):
     country_name = country_id.replace("_", " ").title()

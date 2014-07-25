@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load stringify %}
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="olyrings.ico">
+
+	<title>Sochi 2014 - Countries</title>
+
+	<!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="/static/athlete/bootstrap.min.css" rel="stylesheet"><!-- TODO-->
+
+  <!-- Custom styles for this template -->
+  <link href="/static/athlete/boxesstyle.css" rel="stylesheet"><!--TODO-->
+
+</head>
+<body>
+
+	<script src="/static/athlete/navbar.js"></script>
+
+	<!-- Start of Content -->
+	<div class="container theme-showcase" role="main" style="margin-top:20px">
+	<div class="row">
+  	<div class="panel panel-default">
+  		<div class="panel-heading">
+        <h1 class="panel-title" id="Countries">Countries</h1>
+      </div>
+
+      <ul style="list-style: none;overflow:auto;padding-left:0;">
+
+      {% for event in events %}
+        <li class = "boxes-event">
+            <a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}><strong>{{event.sport}} <br \> {{event.name}}</strong><br><img src={{"/static/athlete/images/"|add:event.icon}} alt="{{event.sport}}: {{event.name}}" class="flag-images"></a><br/>
+        </li>
+      {% endfor %}
+
+  	</ul>
+  	</div>
+	</div>
+	</div> <!-- End of Header -->
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="/static/athlete/bootstrap.min.js"></script>
+  </body>
+  </html>
