@@ -18,7 +18,7 @@ class AthleteSerializer(serializers.ModelSerializer):
 			'bronze_medals'
 		)
 
-class EventsSerializer(serializers.ModelSerializer):
+class EventSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Athlete
 		fields = (
