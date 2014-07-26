@@ -1,3 +1,167 @@
+commit 8828a73c17b281e6f5f72f51cddaafb98acf582f
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Fri Jul 25 20:40:46 2014 -0500
+
+    finished report
+
+commit 1235fa4865a23257b62bc7b82e372dbd6385181f
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Sat Jul 26 01:37:28 2014 +0000
+
+    Magnus Krog
+
+commit 69899f2c61e2c83937d0a14863a1ddb16ce0a2a1
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Fri Jul 25 20:19:14 2014 -0500
+
+    Magnus Krog picture
+
+commit f8f96a50d63d1f9571a6312f414e4d85c191b6e9
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Sat Jul 26 00:43:10 2014 +0000
+
+    Got the api working
+
+commit a3754956472e6640181c23868322504beabcbf32
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Fri Jul 25 19:37:09 2014 -0500
+
+    fixed up report, added missing attributes
+
+commit 75f5eea62c6e932a2a4cb4642bd306e9feb67d79
+Author: nicksonjulian <nicksonjulian@utexas.edu>
+Date:   Fri Jul 25 16:25:03 2014 -0500
+
+    Update serializers.py
+
+commit 22b38cfb937652c2ea907cd346d804486d8a08a3
+Author: nicksonjulian <nicksonjulian@utexas.edu>
+Date:   Fri Jul 25 16:21:27 2014 -0500
+
+    Rename seralizers.py to serializers.py
+
+commit 31c6ba3ed761049036266f2bbbcdbb0f33564034
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Fri Jul 25 02:03:49 2014 +0000
+
+    Created base pages for all categories, implemented new nav bar
+
+commit 5cd7bb2da8a3196972667a43bae1c116905b7a29
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Thu Jul 24 19:19:13 2014 -0500
+
+    added category page template
+
+commit eea2da7f577035c011162068b6d15cc4192b62ad
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Fri Jul 25 00:10:38 2014 +0000
+
+    Added basic footer and added min-heights so several css classes
+
+commit 109e16c875e84094405004808af82cd0ba1a931a
+Author: atlus7 <nicksonjulian@yahoo.com.sg>
+Date:   Thu Jul 24 18:50:31 2014 -0500
+
+    added idb2 report
+
+commit def6ebdcd9e2af1f55c093198293851014d6b3b8
+Author: nicksonjulian <nicksonjulian@utexas.edu>
+Date:   Thu Jul 24 18:47:04 2014 -0500
+
+    Update api.py
+    
+    fix typo
+
+commit df7179494f9bea6e99a57e16a90270394465074e
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Thu Jul 24 23:01:35 2014 +0000
+
+    Added try/except statements to views for cleaner failures
+
+commit 999771c1d1217ecb60432b81098afb1b589a2823
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Thu Jul 24 22:42:37 2014 +0000
+
+    Changed the models and views to be more dynamic
+
+commit 8f649c63e89450bc5979c26e8671b9ff9b6cff8f
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Thu Jul 24 01:27:45 2014 +0000
+
+    Finished basic dynamic loading for all pages, plus linkage
+
+commit ef08fd8d386b34e0a52a65d6bcd28099172ff5c0
+Author: atlus7 <nicksonjulian@yahoo.com.sg>
+Date:   Wed Jul 23 18:13:33 2014 -0500
+
+    added API 2 versions
+
+commit 33051339be33806b41afae0986cd6a1ffa41abf3
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Wed Jul 23 21:52:48 2014 +0000
+
+    Added dynamic events page
+
+commit 940d18cf73ff34a410473b9413a4c5ec96d29025
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Wed Jul 23 01:49:15 2014 +0000
+
+    Began work on dynamic Country pages
+
+commit 4b1e0873f77b292a411eccdc8b1bab536d888c0f
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Tue Jul 22 20:20:51 2014 -0500
+
+    added images for all pages to Website directory
+
+commit de165604f377c488d72d693f989093bcc9cd9616
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Wed Jul 23 00:44:19 2014 +0000
+
+    Working on Athlete dynamic page
+
+commit 92804c945cdf9a2b93e6a0d0fba50eca6ccd6e59
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Tue Jul 22 23:57:09 2014 +0000
+
+    Began work on dynamically loading athlete pages
+
+commit a5ce498a1fba9b06a0aac7de8563f7bf2e2d0be0
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Tue Jul 22 01:09:17 2014 +0000
+
+    Made it so models are now sorted when viewed in admin
+
+commit 143f74ac5c18ac537a835bee6f258deddb00bbc8
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Tue Jul 22 00:57:41 2014 +0000
+
+    Setup DB and South for Django to modify db tabels on the fly
+
+commit 6a58fe64fc4cdba50623718c6f38f8a4b2c65add
+Author: Ardhimas Kamdani <ardhimas.k@gmail.com>
+Date:   Mon Jul 21 19:25:59 2014 -0500
+
+    fixed usa.html and meryldavis.html icon and video
+
+commit 79e74a3968bd28802ea0bd13d6f738b27a82c1e1
+Author: Nickson <nicksonjulian@yahoo.com.sg>
+Date:   Mon Jul 21 17:24:38 2014 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 5375bed44342076d187c98dd458d278ada30eaa0
+Author: ajhooper <ajhooper654@gmail.com>
+Date:   Mon Jul 21 21:39:15 2014 +0000
+
+    Began setup for MySQL database with django
+
+commit 0b9d6624403ab8e42600a3a66f4955aa7582fae9
+Author: Austin Hooper <ajhooper@cs.utexas.edu>
+Date:   Thu Jul 10 23:48:25 2014 -0500
+
+    Got the log and pydoc files
+
 commit 81c0b6776d1d52bd2c6a78766211d91f77330a4c
 Author: atlus7 <nicksonjulian@yahoo.com.sg>
 Date:   Thu Jul 10 23:27:53 2014 -0500
