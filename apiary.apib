@@ -23,7 +23,7 @@ Athletes related resources. An athlete object has the following attributes:
 * Bronze Medals (List of Events)
 
 
-## /athletes
+## api/athlete
 ### List of all athletes [GET]
 Returns a list of all athletes and their ids.
 + Response 200 (application/json)
@@ -35,7 +35,7 @@ Returns a list of all athletes and their ids.
             }
 
 
-## /athletes/{id}
+## api/athlete/{id}
 ### Retrieve an Athlete [GET]
 Returns the details of an athlete.
 + Parameters
@@ -86,7 +86,7 @@ Countries related resources. A country has the following attributes:
 * List of Athletes
 * Sports participated in Sochi
 
-## /countries
+## api/country
 ### List of all Countries [GET]
 Returns a list of countries and their ids.
 + Response 200 (application/json)
@@ -97,7 +97,7 @@ Returns a list of countries and their ids.
                 "ID=Countries":["1=United States","2=Germany","3=Netherlands"]
             }
 
-## /countries/{id}
+## api/country/{id}
 ### Retrieve a Country [GET]
 + Parameters
 
@@ -140,7 +140,7 @@ Events related resources. An event has the following attributes:
 * Silver Medalist(s)
 * Bronze Medalist(s)
 
-## /events
+## api/event
 ### List of all Events [GET]
 + Response 200 (application/json)
 
@@ -150,7 +150,7 @@ Events related resources. An event has the following attributes:
                 "id=Sport:Event Name"=["1=Figure Skating:Ice Dance Free Dance","2=Luge:Doubles","3=Speed Skating:Ladies' 3000m"]
             }
 
-## /events/{id}
+## api/event/{id}
 ### Retrieve an event [GET]
 + Parameters
 
