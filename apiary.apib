@@ -23,14 +23,12 @@ Athletes related resources. An athlete object has the following attributes:
 * Bronze Medals (List of Events)
 
 
-## api/athlete
+## athlete
 ### List of all athletes [GET]
 Returns a list of all athletes and their ids.
 + Response 200 (application/json)
     
     + Body
-            {
-
             {
                 "id": 6,
                 "first_name": "Meghan",
@@ -43,10 +41,10 @@ Returns a list of all athletes and their ids.
                 "gold_medals": [11],
                 "silver_medals": [],
                 "bronze_medals": []
-            }
+            },
 
 
-## api/athlete/{id}
+## athlete/{id}
 ### Retrieve an Athlete [GET]
 Returns the details of an athlete.
 + Parameters
