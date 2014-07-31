@@ -10,66 +10,86 @@ Athletes related resources. An athlete object has the following attributes:
 * Id
 * First Name
 * Last Name
+* Country
 * Gender
-* Nationality
-* Date of Birth
-* Age
+* birthdate
 * Height
 * Weight
-* Place of Birth
-* Total Medals (Total of Gold, Silver, and Bronze Medals won by the athlete)
-* Gold Medals (List of Events)
-* Silver Medals (List of Events)
-* Bronze Medals (List of Events)
+* Gold Medals
+* Silver Medals
+* Bronze Medals
 
 
-## /athlete
+## /api/athlete
 ### List of all athletes [GET]
 Returns a list of all athletes and their ids.
 + Response 200 (application/json)
     
     + Body
 
-            {
-                "ID=Athletes":["1=Meryl Davis","2=Tobias Arit","3=Ireen Wust"]
-            }
+            [
+                {
+                    "id": 6,
+                    "first_name": "Meghan",
+                    "last_name": "Agosta",
+                    "country": 7,
+                    "gender": "Female",
+                    "birthdate": "1987-02-12",
+                    "height": "1.68 m (5' 6'')",
+                    "weight": "67 kg / 148 lbs",
+                    "gold_medals": [11],
+                    "silver_medals": [],
+                    "bronze_medals": []
+                },
+                {
+                    "id": 4,
+                    "first_name": "Victor",
+                    "last_name": "An",
+                    "country": 5,
+                    "gender": "Male",
+                    "birthdate": "1985-11-23",
+                    "height": "1.70 m (5' 7'')",
+                    "weight": "65 kg / 143 lbs",
+                    "gold_medals": [5,6,7],
+                    "silver_medals": [],
+                    "bronze_medals": [8]
+                },
+                ...
+            ]
 
 
-## /athlete/{firstname_lastname}
+## /api/athlete/{firstname_lastname}
 ### Retrieve an Athlete [GET]
 Returns the details of an athlete.
 + Parameters
 
-    + firstname_lastname (required, string, `ireen_wust`) ... first name and last name of the Athlete to perform action with, separated with "_".
+    + firstname_lastname (required, string, `meghan_aghosta`) ... first name and last name of the Athlete to perform action with, separated with "_".
 
 + Response 200 (application/json)
 
     + Body
 
-            {
-                "Id":3,
-                "First Name":"Ireen",
-                "Last Name":"Wust",
-                "Gender":"Female",
-                "Nationality":"Netherlands",
-                "Date of Birth":"1 April 1986",
-                "Age":28,
-                "Height":"1.68m (5'6")",
-                "Weight":"63 kg (139 lbs)",
-                "Place of birth":"Goirle, Netherlands",
-                "Total Medals":5,
-                "Gold Medals":["Speed Skating:Ladies' 3000m", "Speed Skating:Ladies' Team Pursuit"]
-                "Silver Medals":["Speed Skating:Ladies' 1000m", "Speed Skating:Ladies' 1500m", "Speed Skating:Ladies' 5000m"]
-                "Bronze Medals":[]
-            }
-            
+                {
+                    "id": 6,
+                    "first_name": "Meghan",
+                    "last_name": "Agosta",
+                    "country": 7,
+                    "gender": "Female",
+                    "birthdate": "1987-02-12",
+                    "height": "1.68 m (5' 6'')",
+                    "weight": "67 kg / 148 lbs",
+                    "gold_medals": [11],
+                    "silver_medals": [],
+                    "bronze_medals": []
+                }
+                
 + Response 404 (application/json)
 
     + Body
     
             {
                 "message":"error",
-                "errors":["Requested record was not found"]
+                "errors":["not found"]
             }
 
 # Group Countries
@@ -77,48 +97,60 @@ Countries related resources. A country has the following attributes:
 
 * Id
 * Name
-* Description (Wiki link)
-* Year of First Appearance
-* Number of Appearances
+* Description
 * Total of Gold Medals
 * Total of Silver Medals
 * Total of Bronze Medals
 * List of Athletes
-* Sports participated in Sochi
 
-## /country
+## /api/country
 ### List of all Countries [GET]
 Returns a list of countries and their ids.
 + Response 200 (application/json)
         
     + Body
     
-            {
-                "ID=Countries":["1=United States","2=Germany","3=Netherlands"]
-            }
+            [
+                {
+                    "id": 9,
+                    "name": "Austria",
+                    "description": "Austrian athletes have an outstanding record in winter Olympic competition, particularly in alpine skiing where they have won more medals than any other nation.",
+                    "total_gold_medals": 4,
+                    "total_silver_medals": 8,
+                    "total_bronze_medals": 5,
+                    "athletes": [8]
+                },
+                {
+                    "id": 10,
+                    "name": "Belarus",
+                    "description": "Belarus first competed as an independent nation at the Olympic Winter Games in 1994. They won two silver medals at the 1994 Lillehammer Games with biathlete Svetlana Paramygina taking second in the 7.5km event, and speed skater Igor Zhelezovski finishing runner-up in the 1000m.   Biathlon provided a further two medals in Vancouver in 2010, with Sergei Novikov finishing with the silver medal in the men's 20km individual and Darya Domracheva claiming bronze in the women's 15km individual.",
+                    "total_gold_medals": 5,
+                    "total_silver_medals": 0,
+                    "total_bronze_medals": 1,
+                    "athletes": [9]
+                },
+                ...
+            ]
 
-## /country/{countryname}
+## /api/country/{countryname}
 ### Retrieve a Country [GET]
 + Parameters
 
-    + countryname (required, string, `germany`) ... Name of the Country to perform action with.
+    + countryname (required, string, `austria`) ... Name of the Country to perform action with.
 
 + Response 200 (application/json)
 
     + Body
 
-            {
-                "Id":"1",
-                "Name":"United States",
-                "Description":"--",
-                "Year of First Appearance":"1924",
-                "Number of Appearances":"22",
-                "Total of Gold Medals":"28",
-                "Total of Silver Medals":"9",
-                "Total of Bronze Medals":"7",
-                "List of Athletes":"12",
-                "Sports participated in Sochi":""
-            }
+                {
+                    "id": 9,
+                    "name": "Austria",
+                    "description": "Austrian athletes have an outstanding record in winter Olympic competition, particularly in alpine skiing where they have won more medals than any other nation.",
+                    "total_gold_medals": 4,
+                    "total_silver_medals": 8,
+                    "total_bronze_medals": 5,
+                    "athletes": [8]
+                }
     
 + Response 404 (application/json)
 
@@ -126,7 +158,7 @@ Returns a list of countries and their ids.
     
             {
                 "message":"error",
-                "errors":["Requested record was not found"]
+                "errors":["not found"]
             }
 
 # Group Events
@@ -140,34 +172,52 @@ Events related resources. An event has the following attributes:
 * Silver Medalist(s)
 * Bronze Medalist(s)
 
-## /event
+## /api/event
 ### List of all Events [GET]
 + Response 200 (application/json)
 
     + Body
             
-            {
-                "id=Sport:Event Name"=["1=Figure Skating:Ice Dance Free Dance","2=Luge:Doubles","3=Speed Skating:Ladies' 3000m"]
-            }
+            [
+                {
+                    "id": 15,
+                    "name": "Women's Giant Slalom",
+                    "sport": "Alpine Skiing",
+                    "desc": "In the giant slalom, the gates are placed farther apart than in the slalom, but not as far apart as in the super-G. Men\u2019s races have 56 to 70 gates, while ladies\u2019 have 46 to 58. The result is the sum of the skier\u2019s times on two different courses.",
+                    "gold_medalists": [],
+                    "silver_medalists": [8],
+                    "bronze_medalists": []
+                },
+                {
+                    "id": 14,
+                    "name": "Women's Super G",
+                    "sport": "Alpine Skiing",
+                    "desc": "The super giant (Super-G) incorporates aspects of both the downhill and the giant slalom. In the super giant, athletes achieve speeds just as high as in the downhill, but the course trajectory is similar to the course trajectory in the slalom. Athletes ski a course on which the gates are placed at about the same distance apart as in the giant slalom. Each skier gets only one attempt at the course.",
+                    "gold_medalists": [8],
+                    "silver_medalists": [],
+                    "bronze_medalists": []
+                },
+                ...
+            ]
 
-## /event/{eventname}
+## /api/event/{eventname}
 ### Retrieve an event [GET]
 + Parameters
 
-    + eventname (required, string, `alpine_skiing-womens_giant_slalom`) ... Associated sport name followed by the event name separated with "-".
+    + eventname (required, string, `alpine_skiing-womens_giant_slalom`) ... Associated sport name followed by the event name separated with "-". Notice how special characters such as " ' " are ignored.
     
 + Response 200 (application/json)
 
     + Body
 
             {
-                "Id":"1",
-                "Name":"Speed Skating:Ladies' 3000m",
-                "Description":"http://www.sochi2014.com/en/speed-skating-about",
-                "Sport":"Speed Skating",
-                "Gold Medalist":["Ireen Wust"],
-                "Silver Medalist":["Martina Sablikova"],
-                "Bronze Medalist":["Olga Graf"]
+                    "id": 15,
+                    "name": "Women's Giant Slalom",
+                    "sport": "Alpine Skiing",
+                    "desc": "In the giant slalom, the gates are placed farther apart than in the slalom, but not as far apart as in the super-G. Men\u2019s races have 56 to 70 gates, while ladies\u2019 have 46 to 58. The result is the sum of the skier\u2019s times on two different courses.",
+                    "gold_medalists": [],
+                    "silver_medalists": [8],
+                    "bronze_medalists": []
             }
 
 + Response 404 (application/json)
@@ -176,5 +226,5 @@ Events related resources. An event has the following attributes:
     
             {
                 "message":"error",
-                "errors":["Requested record was not found"]
+                "errors":["not found"]
             }
