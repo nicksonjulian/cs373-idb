@@ -17,39 +17,30 @@ Athletes related resources. An athlete object has the following attributes:
 * Height
 * Weight
 * Place of Birth
-* Total Medals  (Total of Gold, Silver, and Bronze Medals won by the athlete)
-* Gold Medals   (List of Events)
+* Total Medals (Total of Gold, Silver, and Bronze Medals won by the athlete)
+* Gold Medals (List of Events)
 * Silver Medals (List of Events)
 * Bronze Medals (List of Events)
 
 
-## athlete
+## /athlete
 ### List of all athletes [GET]
 Returns a list of all athletes and their ids.
 + Response 200 (application/json)
     
     + Body
+
             {
-                "id": 6,
-                "first_name": "Meghan",
-                "last_name": "Agosta",
-                "country": 7,
-                "gender": "Female",
-                "birthdate": "1987-02-12",
-                "height": "1.68 m (5' 6'')",
-                "weight": "67 kg / 148 lbs",
-                "gold_medals": [11],
-                "silver_medals": [],
-                "bronze_medals": []
-            },
+                "ID=Athletes":["1=Meryl Davis","2=Tobias Arit","3=Ireen Wust"]
+            }
 
 
-## athlete/{id}
+## /athlete/{firstname_lastname}
 ### Retrieve an Athlete [GET]
 Returns the details of an athlete.
 + Parameters
 
-    + id (required, number, `1`) ... Numeric `id` of the Athlete to perform action with.
+    + firstname_lastname (required, string, `ireen_wust`) ... first name and last name of the Athlete to perform action with, separated with "_".
 
 + Response 200 (application/json)
 
@@ -95,7 +86,7 @@ Countries related resources. A country has the following attributes:
 * List of Athletes
 * Sports participated in Sochi
 
-## api/country
+## /country
 ### List of all Countries [GET]
 Returns a list of countries and their ids.
 + Response 200 (application/json)
@@ -106,11 +97,11 @@ Returns a list of countries and their ids.
                 "ID=Countries":["1=United States","2=Germany","3=Netherlands"]
             }
 
-## api/country/{id}
+## /country/{countryname}
 ### Retrieve a Country [GET]
 + Parameters
 
-    + id (required, number, `1`) ... Numeric `id` of the Country to perform action with.
+    + countryname (required, string, `germany`) ... Name of the Country to perform action with.
 
 + Response 200 (application/json)
 
@@ -149,7 +140,7 @@ Events related resources. An event has the following attributes:
 * Silver Medalist(s)
 * Bronze Medalist(s)
 
-## api/event
+## /event
 ### List of all Events [GET]
 + Response 200 (application/json)
 
@@ -159,11 +150,11 @@ Events related resources. An event has the following attributes:
                 "id=Sport:Event Name"=["1=Figure Skating:Ice Dance Free Dance","2=Luge:Doubles","3=Speed Skating:Ladies' 3000m"]
             }
 
-## api/event/{id}
+## /event/{eventname}
 ### Retrieve an event [GET]
 + Parameters
 
-    + id (required, number, `1`) ... Numeric `id` of the Event to perform action with.
+    + eventname (required, number, `1`) ... Numeric `id` of the Event to perform action with.
     
 + Response 200 (application/json)
 
