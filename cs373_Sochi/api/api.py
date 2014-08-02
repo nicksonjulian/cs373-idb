@@ -22,8 +22,17 @@ class AthleteDetail(APIView):
         except Athlete.DoesNotExist:
             raise Http404
 
+    def get_object_num(self, pk):
+        try:
+            return Athlete.objects.get(pk = pk)
+        except Athlete.DoesNotExist:
+            raise Http404
+
     def get(self, request, pk, format=None):
-        athlete = self.get_object(pk)
+        if (pk.isnumeric()):
+            athlete = self.get_object_num(pk)
+        else:
+            athlete = self.get_object(pk)
         serialized_athlete = AthleteSerializer(athlete)
         return Response(serialized_athlete.data)
 
@@ -42,11 +51,22 @@ class EventsDetail(APIView):
         except Events.DoesNotExist:
             raise Http404
 
-    def get(self, request, sport, name, format=None):
-        event = self.get_object(name)
+    def get(self, request, sport_name, event_name, format=None):
+        event = self.get_object(event_name)
         serialized_event = EventsSerializer(event)
         return Response(serialized_event.data)
 
+class EventsDetailPK(APIView):
+    def get_object(self, pk):
+        try:
+            return Events.objects.get(pk = pk)
+        except Events.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        event = self.get_object(pk)
+        serialized_event = EventsSerializer(event)
+        return Response(serialized_event.data)
 
 class CountryList(APIView):
 	def get(self, request, format=None):
@@ -62,7 +82,16 @@ class CountryDetail(APIView):
         except Country.DoesNotExist:
             raise Http404
 
+    def get_object_num(self, pk):
+        try:
+            return Country.objects.get(pk = pk)
+        except Country.DoesNotExist:
+            raise Http404
+
     def get(self, request, pk, format=None):
-        country = self.get_object(pk)
+        if (pk.isnumeric()):
+            country = self.get_object_num(pk)
+        else:
+            country = self.get_object(pk)
         serialized_country = CountrySerializer(country)
         return Response(serialized_country.data)

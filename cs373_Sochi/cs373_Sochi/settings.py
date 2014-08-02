@@ -40,7 +40,9 @@ INSTALLED_APPS = (
     'athlete',
     'country',
     'event',
+    'api',
     'south',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
