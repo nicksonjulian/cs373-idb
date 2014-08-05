@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^event/', include('event.urls')),
     url(r'^api/', include('api.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^search/', include('haystack.urls')),
 )

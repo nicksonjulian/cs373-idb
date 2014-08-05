@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'api',
     'south',
     'rest_framework',
+    'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -73,6 +74,13 @@ DATABASES = {
 }
 
 SOUTH_DATABASE_ADAPTERS = { 'default' : 'south.db.mysql' }
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
