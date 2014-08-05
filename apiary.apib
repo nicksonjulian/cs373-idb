@@ -58,12 +58,12 @@ Returns a list of all athletes and their ids.
             ]
 
 
-## /api/athlete/{firstname_lastname}
+## /api/athlete/{id}
 ### Retrieve an Athlete [GET]
 Returns the details of an athlete.
 + Parameters
 
-    + firstname_lastname (required, string, `meghan_aghosta`) ... first name and last name of the Athlete to perform action with, separated with "_".
+    + id (required, integer, `6`) ... id of the Athlete to perform action with, found at API/athletes. 1-10.
 
 + Response 200 (application/json)
 
@@ -132,11 +132,11 @@ Returns a list of countries and their ids.
                 ...
             ]
 
-## /api/country/{countryname}
+## /api/country/{id}
 ### Retrieve a Country [GET]
 + Parameters
 
-    + countryname (required, string, `austria`) ... Name of the Country to perform action with.
+    + id (required, integer, `9`) ... id of the Country to perform action with, found at API/country.
 
 + Response 200 (application/json)
 
@@ -200,11 +200,11 @@ Events related resources. An event has the following attributes:
                 ...
             ]
 
-## /api/event/{eventname}
+## /api/event/{id}
 ### Retrieve an event [GET]
 + Parameters
 
-    + eventname (required, string, `alpine_skiing-womens_giant_slalom`) ... Associated sport name followed by the event name separated with "-". Notice how special characters such as " ' " are ignored.
+    + id (required, integer, `15`) ... id of the event to perform action with, found at API/event 1-19.
     
 + Response 200 (application/json)
 
