@@ -70,6 +70,7 @@ DATABASES = {
         'USER': 'ajhooper',
         'PASSWORD': 'bumbershoot',
         'HOST': 'mysql.server',
+        'TEST_NAME': 'ajhooper$test_default'
     }
 }
 
