@@ -27,6 +27,9 @@ class Athlete(models.Model):
     class Meta:
         ordering = ['last_name']
 
+    def get_cname(self):
+        return "athlete"
+
     def __str__(self):
         return self.first_name + " "  + self.last_name
 
@@ -41,6 +44,9 @@ class Events(models.Model):
 
     class Meta:
         ordering = ['sport','name']
+
+    def get_cname(self):
+        return "events"
 
     def __str__(self):
         return self.sport + ": " + self.name
@@ -60,6 +66,8 @@ class Country(models.Model):
     class Meta:
         ordering = ['name']
 
-    #For Events with medals, load dynamically (?)
+    def get_cname(self):
+        return "country"
+
     def __str__(self):
         return self.name

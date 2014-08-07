@@ -1,3 +1,17 @@
 {{ object.first_name }}
 {{ object.last_name }}
 {{ object.country.name }}
+{{ object.gender }}
+
+{% for event in object.gold_medals.all %}
+    {{event.sport}}
+    {{ event.name }}
+{% endfor %}
+{% for event in object.silver_medals.all %}
+    {{event.sport}}
+    {{ event.name }}
+{% endfor %}
+{% for event in obect.bronze_medals.all %}
+    {{event.sport}}
+    {{ event.name }}
+{% endfor %}

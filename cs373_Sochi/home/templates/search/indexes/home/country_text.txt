@@ -1,0 +1,8 @@
+{{ object.name }}
+{{ object.description }}
+{{ object.country_code }}
+
+{% for athlete in object.athletes.all %}
+    {{ athlete.first_name}}
+    {{ athlete.last_name }}
+{% endfor %}

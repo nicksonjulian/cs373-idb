@@ -1,6 +1,63 @@
-{% for result in page.object_list %}
-   <p>{{ result.object.first_name }}</p>
-   <p>{{ result.object.last_name }}</p>
-{% empty %}
-   <p>No results found.</p>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load stringify %}
+    {% load highlight %}
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="olyrings.ico"> <!-- TODO icon -->
+
+  <title>2014 Sochi Winter Olympics</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/athlete/bootstrap.min.css" rel="stylesheet"><!-- TODO-->
+
+  <!-- Custom styles for this template -->
+  <link href="/static/athlete/home.css" rel="stylesheet"><!--TODO-->
+
+  <body>
+
+     <script src="/static/athlete/navbar.js"></script>
+
+    <!-- Start of Body -->
+    <div class="content">
+        {% for result in page.object_list %}
+            {% if result.object.get_cname == "athlete" %}
+            <div>
+                {% highlight result.object.first_name with query %} {% highlight result.object.last_name with query %}
+                {% highlight result.object.gender with query %}
+                {% highlight result.object.country.name with query %}
+            </div>
+            {% endif %}
+
+            {% if result.object.get_cname == "country" %}
+            <div>
+                {% highlight result.object.name with query %}
+                {% highlight result.object.description with query %}
+            </div>
+            {% endif %}
+
+            {% if result.object.get_cname == "events" %}
+            <div>
+                {% highlight result.object.name with query %} {% highlight result.object.sport with query %}
+                {% highlight result.object.desc with query %}
+            </div>
+            {% endif %}
+        {% empty %}
+        <p>No results found.</p>
+        {% endfor %}
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/static/athlete/bootstrap.min.js"></script>
+  </body>
+  </html>

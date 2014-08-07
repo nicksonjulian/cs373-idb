@@ -30,12 +30,13 @@ document.write('\
 				</li>\
 \
 			<!-- Search bar -->\
-			<form class="navbar-form navbar-left" role="search">\
-			  <div class="form-group">\
-				<input type="text" class="form-control" placeholder="">\
-			  </div>\
-			  <button type="submit" class="btn btn-default">Search</button>\
-			</form>\
+			<form action="/search" method="get" class="navbar-form navbar-left">\
+			<div class="form-group">\
+                <input type="text" name="q">\
+            </div>\
+                <button type="submit" class="btn btn-default">Search</button>\
+            </form>\
+\
 			<!-- End of Search bar -->\
 \
 		  </ul>\

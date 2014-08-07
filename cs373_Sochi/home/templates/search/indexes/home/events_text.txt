@@ -1,0 +1,19 @@
+{{ object.name }}
+{{ object.sport }}
+{{ object.desc }}
+
+{% for athlete in object.gold_medalists.all %}
+    {{ athlete.first_name}}
+    {{ athlete.last_name }}
+{% endfor %}
+
+{% for athlete in object.silver_medalists.all %}
+    {{ athlete.first_name}}
+    {{ athlete.last_name }}
+{% endfor %}
+
+{% for athlete in object.bronze_medalists.all %}
+    {{ athlete.first_name}}
+    {{ athlete.last_name }}
+{% endfor %}
+
