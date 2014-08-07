@@ -1,7 +1,7 @@
 import urllib.request
 import json
 
-def exerciseapi(bookid):
+def exerciseapi(bookid, title, authorfullname, publishername):
     response = urllib.request.urlopen('http://alabibliotheque.pythonanywhere.com/books/' + str(bookid) + '.json')
     html = response.read()
     data = json.loads(html.decode('utf8'))
