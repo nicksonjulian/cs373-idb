@@ -1,6 +1,8 @@
 import urllib.request
 import json
 
+
+#a is the array to contain the book's title, author's full name, and publishers, in that order. Note: there can be multiple publishers. 
 def exerciseapi(theid, a):
     response = urllib.request.urlopen('http://alabibliotheque.pythonanywhere.com/books/' + str(theid) + '.json')
     html = response.read()
