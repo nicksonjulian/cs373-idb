@@ -1,8 +1,8 @@
 import urllib.request
 import json
 
-def exerciseapi(theid):
-    response = urllib.request.urlopen('http://alabibliotheque.pythonanywhere.com/books/' + str(theid) + '.json')
+def exerciseapi(bookid):
+    response = urllib.request.urlopen('http://alabibliotheque.pythonanywhere.com/books/' + str(bookid) + '.json')
     html = response.read()
     data = json.loads(html.decode('utf8'))
     title = data['title'] #book's title 
