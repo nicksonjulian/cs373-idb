@@ -96,30 +96,37 @@ type="application/x-shockwave-flash" style="float:right">
 					<th>Gold</th>
 						{% if athlete.gold_medals.all.count == 0 %}
 					        <td>&nbsp;</td>
-					    {% endif %}
+					    {% else %}
 					    <td>
 					    {% for event in athlete.gold_medals.all %}
-                            <div><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</div>
+                            <div><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></div>
                         {% endfor %}
                         </td>
+                        {% endif %}
 				</tr>
 				<tr>
 					<th>Silver</th>
 					    {% if athlete.silver_medals.all.count == 0 %}
 					        <td>&nbsp;</td>
-					    {% endif %}
+					    {% else %}
+					    <td>
 					    {% for event in athlete.silver_medals.all %}
-                            <td><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
+                            <div><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></div>
                         {% endfor %}
+                        </td>
+                        {% endif %}
 				</tr>
 				<tr>
 					<th>Bronze</th>
 						{% if athlete.bronze_medals.all.count == 0 %}
 					        <td>&nbsp;</td>
-					    {% endif %}
+					    {% else %}
+					    <td>
 					    {% for event in athlete.bronze_medals.all %}
-                            <td><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></td>
+                            <div><a href={{"/event/"|add:event.sport|add:"-"|add:event.name|stringify}}>{{event.sport}}:{{ event.name }}</a></div>
                         {% endfor %}
+                        </td>
+                        {% endif %}
                 </tr>
 			</table>
 		</div>

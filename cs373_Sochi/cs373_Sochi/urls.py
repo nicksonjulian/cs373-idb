@@ -10,6 +10,8 @@ urlpatterns = patterns('',
     url(r'^country/', include('country.urls')),
     url(r'^event/', include('event.urls')),
     url(r'^api/', include('api.urls')),
+    url(r'^sponsor/', include('sponsor.urls')),
+    url(r'^about/', include('about.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^search/', include('haystack.urls')),
 )

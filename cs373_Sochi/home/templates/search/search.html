@@ -28,22 +28,28 @@
     <div class="content">
         {% for result in page.object_list %}
             {% if result.object.get_cname == "athlete" %}
-            <div>
+            <div class="search_box">
+                <a href={{"/athlete/"|add:result.object.first_name|add:" "|add:result.object.last_name|stringify}}> {{result.object.first_name}} {{result.object.last_name}} </a> <br>
                 {% highlight result.object.first_name with query %} {% highlight result.object.last_name with query %}
                 {% highlight result.object.gender with query %}
                 {% highlight result.object.country.name with query %}
+                {% for event in result.object.gold_medals.all %}
+                    {% highlight event.sport with query %}: {% highlight event.name with query %}
+                {% endfor %}
             </div>
             {% endif %}
 
             {% if result.object.get_cname == "country" %}
-            <div>
+            <div class="search_box">
+                <a href={{"/country/"|add:result.object.name|stringify}}>{{ result.object.name }}</a> <br>
                 {% highlight result.object.name with query %}
                 {% highlight result.object.description with query %}
             </div>
             {% endif %}
 
             {% if result.object.get_cname == "events" %}
-            <div>
+            <div class="search_box">
+                <a href={{"/event/"|add:result.object.sport|add:"-"|add:result.object.name|stringify}}>{{result.object.sport}}:{{ result.object.name }}</a> <br>
                 {% highlight result.object.name with query %} {% highlight result.object.sport with query %}
                 {% highlight result.object.desc with query %}
             </div>

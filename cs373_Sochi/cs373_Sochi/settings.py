@@ -41,6 +41,8 @@ INSTALLED_APPS = (
     'country',
     'event',
     'api',
+    'sponsor',
+    'about',
     'south',
     'rest_framework',
     'haystack',

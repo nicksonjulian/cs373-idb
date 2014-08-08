@@ -40,7 +40,7 @@ body {
 
 /* Header Classes */
 .header{
-	width:760px;
+	width:100%; max-width:760px;
 	padding: 20px 20px 20px 20px;
 	margin: 60px auto 0px auto;
 	background-color: #E5E4E2;
@@ -122,7 +122,7 @@ body {
 
 /* Medal Classes */
 .content {
-	width:760px;
+	width:100%; max-width:760px;
 	padding: 20px 20px 20px 20px;
 	margin: 20px auto 0px auto;
 	background-color:#E5E4E2;
@@ -236,7 +236,8 @@ body {
 }
 
 .footer {
-  position: absolute;
+
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -249,27 +250,4 @@ body {
   padding-left: 15px;
 }
 
-/* unvisited link */
-a:link {
-    color: #000000
-	font-weight: bold;
-}
-
-/* visited link */
-a:visited {
-    color: #000000
-	font-weight: bold;
-}
-
-/* mouse over link */
-a:hover {
-    color: #000000
-	font-weight: bold;
-}
-
-/* selected link */
-a:active {
-    color: #000000
-	font-weight: bold;
-}
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load get_json %}
+{% load rand_id %}
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="olyrings.ico"> <!-- TODO icon -->
+<title>Sochi 2014 - Sponsor</title>
+<!-- Bootstrap core CSS -->
+<link href="/static/athlete/bootstrap.min.css" rel="stylesheet"><!-- TODO-->
+<!-- Custom styles for this template -->
+<link href="/static/athlete/aboutstyle.css" rel="stylesheet"><!--TODO-->
+<body>
+<script src="/static/athlete/navbar.js"></script>
+<!-- Start of Content -->
+
+<div class="content">
+<h1 class="title">Sponsor</h6>
+<hr class="header-decoration"></hr>
+{% with 20|rand_id|get_json as author %}
+<p class="descript">This website is generously sponsored by the publisher {{author.5}}
+    {% if author|length > 6 %}
+        and {{author.6}}
+    {% endif %}
+    .
+</p>
+<h1 class="title">Recommendation</h6>
+<hr class="header-decoration"></hr>
+<p class="descript">Our sponsor recommends the book "{{author.0}}" by author {{author.3}}.</p>
+<img class="cover" src="https://alabibliotheque.pythonanywhere.com/static/images/cover/{{author.1}}" alt="{{author.0}}">
+<img class="cover" src="https://alabibliotheque.pythonanywhere.com/static/images/photo/{{author.4}}" alt="{{author.3}}">
+<br>
+Summary:
+{{author.2}}
+{% endwith %}
+</div>
+
+
+<div class="footer">
+<div class="container">
+<p class="text-muted">For more information on events, visit the official Sochi events page <a href="http://www.sochi2014.com/en/schedule-and-results"> Sochi Games </a></p>
+</div>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+</body>
+</html>

@@ -28,6 +28,12 @@ document.write('\
 				<li>\
 					<a href="http://ajhooper.pythonanywhere.com/event/">Events</a>\
 				</li>\
+				<li>\
+					<a href="http://ajhooper.pythonanywhere.com/about/">About</a>\
+				</li>\
+				<li>\
+					<a href="http://ajhooper.pythonanywhere.com/sponsor/">Sponsor</a>\
+				</li>\
 \
 			<!-- Search bar -->\
 			<form action="/search" method="get" class="navbar-form navbar-left">\

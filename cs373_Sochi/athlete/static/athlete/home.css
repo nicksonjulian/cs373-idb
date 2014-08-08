@@ -17,6 +17,10 @@ body {
 	font-family: Sans-serif, serif;
 }
 
+input {
+    color:black;
+}
+
 /* Navbar Class */
 .navbar .navbar-brand{
 	background: linear-gradient(#3090C7, #357EC7);
@@ -53,7 +57,7 @@ body {
 .header{
 	width:760px;
 	padding: 20px 20px 20px 20px;
-	margin: 60px auto 0px auto;
+	margin: 40px auto 0px auto;
 	background-color: #E5E4E2;
 	border: 1px solid #000000
 }
@@ -97,6 +101,18 @@ body {
 	background-color:#E5E4E2;
 	border: 1px solid #000000
 }
+
+.search_box {
+    border: 2px solid #a1a1a1;
+    padding: 10px 40px;
+    background: #dddddd;
+    margin: 10px;
+}
+
+.highlighted {
+    background-color: #FFFF00;
+}
+
 /* unvisited link */
 a:link {
     color: #000000
