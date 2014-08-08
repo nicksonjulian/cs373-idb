@@ -22,8 +22,10 @@ def exerciseapi(theid):
     data2 = json.loads(html2.decode('utf8'))
     authorfullname = data2['name'] #books's author
     author_pic = data2['photo']
+    author_bio = data2['bio']
     a.append(authorfullname)
     a.append(author_pic)
+    a.append(author_bio)
 
     for publisherid in publisherids:
         response3 = urllib.request.urlopen('http://alabibliotheque.pythonanywhere.com/publishers/' + str(publisherid) + '.json')

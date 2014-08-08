@@ -21,22 +21,21 @@
 <div class="content">
 <h1 class="title">Sponsor</h6>
 <hr class="header-decoration"></hr>
-{% with 20|rand_id|get_json as author %}
-<p class="descript">This website is generously sponsored by the publisher {{author.5}}
-    {% if author|length > 6 %}
-        and {{author.6}}
+{% with 23|rand_id|get_json as author %}
+<p class="descript">This website is generously sponsored by the publisher {{author.6}}
+    {% if author|length > 7 %}
+        and {{author.7}}
     {% endif %}
     .
 </p>
 <h1 class="title">Recommendation</h6>
 <hr class="header-decoration"></hr>
 <p class="descript">Our sponsor recommends the book "{{author.0}}" by author {{author.3}}.</p>
+<img class="photo3" src="https://alabibliotheque.pythonanywhere.com/static/images/photo/{{author.4}}" alt="{{author.3}}">
+<p class="profile4">{{author.5}}</p>
 <img class="cover" src="https://alabibliotheque.pythonanywhere.com/static/images/cover/{{author.1}}" alt="{{author.0}}">
-<img class="cover" src="https://alabibliotheque.pythonanywhere.com/static/images/photo/{{author.4}}" alt="{{author.3}}">
-<br>
-Summary:
-{{author.2}}
-{% endwith %}
+<p class="profile3">{{author.2}}
+{% endwith %}</p>
 </div>
 
 

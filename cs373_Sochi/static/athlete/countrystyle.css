@@ -17,6 +17,10 @@ body {
 	font-family: Sans-serif, serif;
 }
 
+input {
+    color:black;
+}
+
 /* Navbar Class */
 .navbar .navbar-brand{
 	background: linear-gradient(#3090C7, #357EC7);
